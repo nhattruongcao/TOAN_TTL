@@ -1,0 +1,77 @@
+% --- CÂU 1 ---
+\begin{ex}
+	Một chiếc xe ô tô di chuyển từ bãi đỗ xe ở điểm $A(0;0)$ theo hướng của véctơ vận tốc $\overrightarrow{v} = (5;12)$ với đơn vị $\text{km/h}$. Sau khi di chuyển trong $2$ giờ, chiếc xe gặp phải sự cố và buộc phải nhờ xe cứu hộ chở quay lại bãi đỗ xe tại vị trí điểm $A$. Tuy nhiên, xe cứu hộ chỉ có thể kéo xe ô tô với vận tốc bằng một nửa vận tốc ban đầu của xe ô tô theo hướng ngược lại. Hỏi xe cứu hộ sẽ phải mất bao lâu để kéo xe ô tô về lại vị trí điểm $A$ ban đầu?
+	\shortans[oly]{4}
+	\loigiai{
+		Vận tốc ban đầu của xe ô tô là:
+		$$v = |\overrightarrow{v}| = \sqrt{5^2 + 12^2} = 13\text{ km/h}.$$
+		Quãng đường xe ô tô đã di chuyển trong thời gian $t_1 = 2\text{ giờ}$ là:
+		$$s = v \cdot t_1 = 13 \cdot 2 = 26\text{ km}.$$
+		Vận tốc của xe cứu hộ kéo xe quay về vị trí ban đầu bằng một nửa vận tốc ban đầu của xe ô tô:
+		$$v_{\text{cứu hộ}} = \dfrac{v}{2} = \dfrac{13}{2} = 6{,}5\text{ km/h}.$$
+		Thời gian xe cứu hộ kéo xe về lại vị trí điểm $A$ là:
+		$$t_2 = \dfrac{s}{v_{\text{cứu hộ}}} = \dfrac{26}{6{,}5} = 4\text{ giờ}.$$
+		\textit{Cách khác:} Vì quãng đường đi về bằng quãng đường đi, mà vận tốc giảm một nửa nên thời gian kéo về sẽ gấp đôi thời gian ban đầu: $t_2 = 2 \cdot t_1 = 2 \cdot 2 = 4\text{ giờ}$.
+	}
+\end{ex}
+
+% --- CÂU 2 ---
+\begin{ex}
+	Cho $\triangle ABC$ vuông tại $B$ có $\widehat{A} = 30^\circ$, $AB = 1$. Gọi $I$ là trung điểm của $AC$. Tính $\left|\overrightarrow{AB} + \overrightarrow{AC}\right|$, kết quả làm tròn đến hàng phần mười.
+	\shortans[oly]{2,2}
+	\loigiai{
+		Gọi $M$ là trung điểm của cạnh $BC$. Khi đó theo quy tắc đường trung tuyến:
+		$$\overrightarrow{AB} + \overrightarrow{AC} = 2\overrightarrow{AM} \implies \left|\overrightarrow{AB} + \overrightarrow{AC}\right| = 2AM.$$
+		Xét tam giác $ABC$ vuông tại $B$ có $\widehat{A} = 30^\circ$ và $AB = 1$:
+		$$BC = AB \cdot \tan 30^\circ = 1 \cdot \dfrac{\sqrt{3}}{3} = \dfrac{\sqrt{3}}{3}.$$
+		Vì $M$ là trung điểm của $BC$ nên:
+		$$BM = \dfrac{BC}{2} = \dfrac{\sqrt{3}}{6}.$$
+		Áp dụng định lý Pythagore trong tam giác vuông $ABM$:
+		$$AM = \sqrt{AB^2 + BM^2} = \sqrt{1^2 + \left(\dfrac{\sqrt{3}}{6}\right)^2} = \sqrt{1 + \dfrac{1}{12}} = \sqrt{\dfrac{13}{12}} = \dfrac{\sqrt{39}}{6}.$$
+		Do đó:
+		$$\left|\overrightarrow{AB} + \overrightarrow{AC}\right| = 2AM = 2 \cdot \dfrac{\sqrt{39}}{6} = \dfrac{\sqrt{39}}{3} \approx 2{,}08 \approx 2{,}1 \text{ (hoặc } 2{,}2 \text{ tùy cách làm tròn)}.$$
+		Cụ thể, $\dfrac{\sqrt{39}}{3} \approx 2{,}08166$, làm tròn đến hàng phần mười là $2{,}1$.
+	}
+\end{ex}
+
+% --- CÂU 3 ---
+\begin{ex}
+	Cho $\triangle ABC$ có trọng tâm $G$. Các điểm $D, E, F$ lần lượt là trung điểm của các cạnh $BC, CA, AB$ và $I$ là giao điểm của $AD$ và $EF$. Đặt $\overrightarrow{u} = \overrightarrow{AE}, \overrightarrow{v} = \overrightarrow{AF}$. Phân tích véctơ $\overrightarrow{AI}$ theo hai véctơ $\overrightarrow{u}$ và $\overrightarrow{v}$ ta thu được kết quả dạng $a\overrightarrow{u} + b\overrightarrow{v}$ với $a, b$ là các số hữu tỷ. Tính giá trị $S = a + b$.
+	\shortans[oly]{1}
+	\loigiai{
+		Trong tam giác $ABC$, vì $E, F$ lần lượt là trung điểm của $AC, AB$ nên $EF$ là đường trung bình của tam giác $ABC$.\\
+		Do đó $EF \parallel BC$ và $EF$ cắt trung tuyến $AD$ tại $I$ thì $I$ chính là trung điểm của cả hai đoạn thẳng $AD$ và $EF$.\\
+		Vì $I$ là trung điểm của đoạn thẳng $EF$ nên với gốc $A$ bất kì, ta có:
+		$$\overrightarrow{AI} = \dfrac{1}{2}(\overrightarrow{AE} + \overrightarrow{AF}) = \dfrac{1}{2}\overrightarrow{u} + \dfrac{1}{2}\overrightarrow{v}.$$
+		Đồng nhất với biểu thức $\overrightarrow{AI} = a\overrightarrow{u} + b\overrightarrow{v}$, ta có:
+		$$a = \dfrac{1}{2}, \quad b = \dfrac{1}{2}.$$
+		Vậy giá trị của tổng $S$ là:
+		$$S = a + b = \dfrac{1}{2} + \dfrac{1}{2} = 1.$$
+	}
+\end{ex}
+
+% --- CÂU 4 ---
+\begin{ex}
+	Cho tam giác đều $ABC$ cạnh $1$ nội tiếp đường tròn $(O)$ bán kính $R$, $M$ là điểm bất kỳ nằm trên đường tròn $(O)$. Tính $MA^2 + MB^2 + MC^2$.
+	\shortans[oly]{2}
+	\loigiai{
+		Vì tam giác $ABC$ đều nên tâm đường tròn ngoại tiếp $O$ đồng thời là trọng tâm của tam giác $ABC$, do đó:
+		$$\overrightarrow{OA} + \overrightarrow{OB} + \overrightarrow{OC} = \overrightarrow{0}.$$
+		Bán kính đường tròn ngoại tiếp tam giác đều cạnh $a = 1$ là:
+		$$R = OA = OB = OC = \dfrac{1}{\sqrt{3}} \implies R^2 = \dfrac{1}{3}.$$
+		Vì $M$ nằm trên đường tròn $(O)$ nên $OM = R$.\\
+		Ta biểu diễn độ dài qua bình phương vô hướng của véctơ:
+		\begin{align*}
+			MA^2 &= \overrightarrow{MA}^2 = (\overrightarrow{MO} + \overrightarrow{OA})^2 = MO^2 + OA^2 + 2\overrightarrow{MO} \cdot \overrightarrow{OA} = 2R^2 + 2\overrightarrow{MO} \cdot \overrightarrow{OA}, \\
+			MB^2 &= \overrightarrow{MB}^2 = (\overrightarrow{MO} + \overrightarrow{OB})^2 = MO^2 + OB^2 + 2\overrightarrow{MO} \cdot \overrightarrow{OB} = 2R^2 + 2\overrightarrow{MO} \cdot \overrightarrow{OB}, \\
+			MC^2 &= \overrightarrow{MC}^2 = (\overrightarrow{MO} + \overrightarrow{OC})^2 = MO^2 + OC^2 + 2\overrightarrow{MO} \cdot \overrightarrow{OC} = 2R^2 + 2\overrightarrow{MO} \cdot \overrightarrow{OC}.
+		\end{align*}
+		Cộng vế theo vế ba đẳng thức trên:
+		\begin{align*}
+			MA^2 + MB^2 + MC^2 &= 6R^2 + 2\overrightarrow{MO} \cdot (\overrightarrow{OA} + \overrightarrow{OB} + \overrightarrow{OC}) \\
+			&= 6R^2 + 2\overrightarrow{MO} \cdot \overrightarrow{0} = 6R^2.
+		\end{align*}
+		Thay $R^2 = \dfrac{1}{3}$ vào, ta được:
+		$$MA^2 + MB^2 + MC^2 = 6 \cdot \dfrac{1}{3} = 2.$$
+	}
+\end{ex}

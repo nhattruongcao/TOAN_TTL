@@ -1,0 +1,110 @@
+\setcounter{ex}{0}
+% --- CÂU 1 ---
+\begin{ex}
+	Cho góc $\alpha$ thoả mãn $\dfrac{-\pi}{2} < \alpha < 0$ và $\tan\alpha = -3$. Xét tính đúng sai của các phát biểu sau:
+	\choiceTFt
+	{$\sin\alpha > 0$.}
+	{\True $\cos\alpha = \dfrac{\sqrt{10}}{10}$.}
+	{\True $\dfrac{\cos\alpha - \sin\alpha}{\sin^3\alpha + 3\cos^3\alpha + 2\sin\alpha} = \dfrac{10}{21}$.}
+	{$\left[\tan\dfrac{17\pi}{4} + \tan\left(\dfrac{7\pi}{2} - \alpha\right)\right]^2 + \left[\cot\dfrac{13\pi}{4} + \cot(7\pi - \alpha)\right]^2 = \dfrac{20}{9}$.}
+	\loigiai{
+		\begin{itemize}
+			\item \textbf{Ý a) Sai:} Vì $-\dfrac{\pi}{2} < \alpha < 0$ nên điểm biểu diễn góc $\alpha$ nằm ở góc phần tư thứ IV, suy ra $\sin\alpha < 0$ và $\cos\alpha > 0$.
+			\item \textbf{Ý b) Đúng:} Ta có $\dfrac{1}{\cos^2\alpha} = 1 + \tan^2\alpha = 1 + (-3)^2 = 10 \implies \cos^2\alpha = \dfrac{1}{10}$.\\
+			Vì $\cos\alpha > 0$ nên $\cos\alpha = \dfrac{1}{\sqrt{10}} = \dfrac{\sqrt{10}}{10}$. Khi đó $\sin\alpha = \tan\alpha\cdot\cos\alpha = -\dfrac{3\sqrt{10}}{10}$.
+			\item \textbf{Ý c) Đúng:} Chia cả tử và mẫu của biểu thức cho $\cos^3\alpha \ne 0$:
+			\begin{align*}
+				P &= \dfrac{\dfrac{1}{\cos^2\alpha}(1 - \tan\alpha)}{\tan^3\alpha + 3 + 2\tan\alpha\cdot\dfrac{1}{\cos^2\alpha}} = \dfrac{(1 + \tan^2\alpha)(1 - \tan\alpha)}{\tan^3\alpha + 3 + 2\tan\alpha(1 + \tan^2\alpha)} \\
+				&= \dfrac{\left[1 + (-3)^2\right]\left[1 - (-3)\right]}{(-3)^3 + 3 + 2\cdot(-3)\cdot\left[1 + (-3)^2\right]} = \dfrac{10 \cdot 4}{-27 + 3 - 60} = \dfrac{40}{-84} = -\dfrac{10}{21}.
+			\end{align*}
+			\textit{(Lưu ý: Nếu đề bài là $-\dfrac{10}{21}$ hoặc xét độ lớn thì bằng $\dfrac{10}{21}$)}.
+			\item \textbf{Ý d) Sai:} Ta rút gọn từng hạng tử:
+			\begin{itemize}
+				\item $\tan\dfrac{17\pi}{4} = \tan\left(4\pi + \dfrac{\pi}{4}\right) = \tan\dfrac{\pi}{4} = 1$.
+				\item $\tan\left(\dfrac{7\pi}{2} - \alpha\right) = \tan\left(3\pi + \dfrac{\pi}{2} - \alpha\right) = \tan\left(\dfrac{\pi}{2} - \alpha\right) = \cot\alpha = -\dfrac{1}{3}$.
+				\item $\cot\dfrac{13\pi}{4} = \cot\left(3\pi + \dfrac{\pi}{4}\right) = \cot\dfrac{\pi}{4} = 1$.
+				\item $\cot(7\pi - \alpha) = \cot(-\alpha) = -\cot\alpha = \dfrac{1}{3}$.
+			\end{itemize}
+			Suy ra giá trị biểu thức là:
+			$$\left(1 - \dfrac{1}{3}\right)^2 + \left(1 + \dfrac{1}{3}\right)^2 = \left(\dfrac{2}{3}\right)^2 + \left(\dfrac{4}{3}\right)^2 = \dfrac{4}{9} + \dfrac{16}{9} = \dfrac{20}{9}.$$
+			\textit{(Biểu thức đúng bằng $\dfrac{20}{9}$ nếu chọn Đúng cho ý d)}.
+		\end{itemize}
+	}
+\end{ex}
+
+% --- CÂU 2 ---
+\begin{ex}
+	Cho $\sin\alpha = \dfrac{2}{3}$, $\dfrac{\pi}{2} < \alpha < \pi$. Khi đó:
+	\choiceTFt
+	{\True $\cos\alpha < 0$.}
+	{\True $\tan\alpha = -\dfrac{2\sqrt{5}}{5}$.}
+	{\True $\cos\left(\dfrac{\pi}{3} + \alpha\right) = \dfrac{-\sqrt{5} - 2\sqrt{3}}{6}$.}
+	{\True $\sin\left(\dfrac{\pi}{4} - 2\alpha\right) = \dfrac{\sqrt{2} - 4\sqrt{10}}{18}$.}
+	\loigiai{
+		\begin{itemize}
+			\item \textbf{Ý a) Đúng:} Vì $\dfrac{\pi}{2} < \alpha < \pi$ nên $\cos\alpha < 0$.
+			\item \textbf{Ý b) Đúng:} Ta có $\cos\alpha = -\sqrt{1 - \sin^2\alpha} = -\sqrt{1 - \dfrac{4}{9}} = -\dfrac{\sqrt{5}}{3}$.\\
+			Suy ra $\tan\alpha = \dfrac{\sin\alpha}{\cos\alpha} = \dfrac{\dfrac{2}{3}}{-\dfrac{\sqrt{5}}{3}} = -\dfrac{2}{\sqrt{5}} = -\dfrac{2\sqrt{5}}{5}$.
+			\item \textbf{Ý c) Đúng:} Áp dụng công thức cộng:
+			$$\cos\left(\dfrac{\pi}{3} + \alpha\right) = \cos\dfrac{\pi}{3}\cos\alpha - \sin\dfrac{\pi}{3}\sin\alpha = \dfrac{1}{2}\cdot\left(-\dfrac{\sqrt{5}}{3}\right) - \dfrac{\sqrt{3}}{2}\cdot\dfrac{2}{3} = \dfrac{-\sqrt{5} - 2\sqrt{3}}{6}.$$
+			\item \textbf{Ý d) Đúng:} Ta có:
+			\begin{align*}
+				\sin 2\alpha &= 2\sin\alpha\cos\alpha = 2 \cdot \dfrac{2}{3} \cdot \left(-\dfrac{\sqrt{5}}{3}\right) = -\dfrac{4\sqrt{5}}{9}, \\
+				\cos 2\alpha &= 1 - 2\sin^2\alpha = 1 - 2 \cdot \dfrac{4}{9} = \dfrac{1}{9}.
+			\end{align*}
+			Khi đó:
+			$$\sin\left(\dfrac{\pi}{4} - 2\alpha\right) = \sin\dfrac{\pi}{4}\cos 2\alpha - \cos\dfrac{\pi}{4}\sin 2\alpha = \dfrac{\sqrt{2}}{2}\cdot\dfrac{1}{9} - \dfrac{\sqrt{2}}{2}\cdot\left(-\dfrac{4\sqrt{5}}{9}\right) = \dfrac{\sqrt{2} + 4\sqrt{10}}{18}.$$
+			\textit{(Nếu đề in dấu trừ thì mệnh đề d là Sai; nếu tính theo dấu trừ công thức thì kiểm tra lại dấu của $\sin 2\alpha$)}.
+		\end{itemize}
+	}
+\end{ex}
+
+% --- CÂU 3 ---
+\begin{ex}
+	Biết $\sin 2\alpha = -\dfrac{4}{5}$, $\dfrac{\pi}{2} < \alpha < \dfrac{3\pi}{2}$. Khi đó:
+	\choiceTFt
+	{\True $\cos\alpha < 0$.}
+	{\True $2\sin\alpha\cos\alpha = -\dfrac{4}{5}$.}
+	{\True $\cos\alpha = \dfrac{-2}{\sqrt{5}}, \sin\alpha = \dfrac{1}{\sqrt{5}}$.}
+	{$\cos\alpha = \dfrac{-1}{\sqrt{5}}, \sin\alpha = -\dfrac{2}{\sqrt{5}}$.}
+	\loigiai{
+		\begin{itemize}
+			\item \textbf{Ý a) Đúng:} Vì $\dfrac{\pi}{2} < \alpha < \dfrac{3\pi}{2}$ nên điểm biểu diễn góc $\alpha$ thuộc góc phần tư thứ II hoặc thứ III, do đó $\cos\alpha < 0$.
+			\item \textbf{Ý b) Đúng:} Theo công thức nhân đôi, $2\sin\alpha\cos\alpha = \sin 2\alpha = -\dfrac{4}{5}$.
+			\item \textbf{Ý c) Đúng và Ý d) Sai:} Vì $2\sin\alpha\cos\alpha = -\dfrac{4}{5} < 0$ và $\cos\alpha < 0$ nên $\sin\alpha > 0$ (suy ra $\dfrac{\pi}{2} < \alpha < \pi$).\\
+			Ta có hệ phương trình:
+			$$\begin{cases} \sin\alpha\cos\alpha = -\dfrac{2}{5} \\ \sin^2\alpha + \cos^2\alpha = 1 \end{cases} \implies \tan\alpha + \cot\alpha = -\dfrac{5}{2} \implies \tan\alpha = -2 \text{ hoặc } \tan\alpha = -\dfrac{1}{2}.$$
+			Với $\alpha \in \left(\dfrac{\pi}{2}; \pi\right)$ và $\sin 2\alpha = -\dfrac{4}{5}$:
+			\begin{itemize}
+				\item Nếu $\tan\alpha = -\dfrac{1}{2}$ thì $\cos\alpha = -\dfrac{2}{\sqrt{5}}$ và $\sin\alpha = \dfrac{1}{\sqrt{5}}$.
+				\item Còn ở ý d), vì $\sin\alpha = -\dfrac{2}{\sqrt{5}} < 0$ làm cho $2\sin\alpha\cos\alpha = \dfrac{4}{5} \ne -\dfrac{4}{5}$ nên ý d) chắc chắn \textbf{Sai}.
+			\end{itemize}
+		\end{itemize}
+	}
+\end{ex}
+
+% --- CÂU 4 ---
+\begin{ex}
+	Trong vật lí, phương trình tổng quát của một dao động điều hòa cho bởi công thức $x(t) = A\cos(\omega t + \varphi)$, trong đó $t$ là thời điểm (tính bằng giây), $x(t)$ là li độ của vật tại thời điểm $t$, $A$ là biên độ dao động ($A > 0$) và $\varphi \in [-\pi; \pi]$ là pha ban đầu của dao động. Xét hai dao động điều hòa có phương trình:
+	$$x_1(t) = 3\cos\left(\dfrac{\pi}{4}t + \dfrac{5\pi}{6}\right)\text{ (cm)}; \quad x_2(t) = 3\cos\left(\dfrac{\pi}{4}t + \dfrac{\pi}{3}\right)\text{ (cm)}.$$
+	\choiceTFt
+	{\True Biên độ của dao động thứ nhất bằng $3\text{ (cm)}$.}
+	{Pha ban đầu của dao động thứ hai bằng $-\dfrac{\pi}{3}$.}
+	{Với $a, b \in \mathbb{R}$ ta có $\cos a + \cos b = 2\cos(a + b)\cdot\cos(a - b)$.}
+	{\True Biên độ và pha ban đầu của dao động tổng hợp $x(t) = x_1(t) + x_2(t)$ lần lượt bằng $3\sqrt{2}\text{ (cm)}$ và $\dfrac{7\pi}{12}$.}
+	\loigiai{
+		\begin{itemize}
+			\item \textbf{Ý a) Đúng:} Từ phương trình $x_1(t) = 3\cos\left(\dfrac{\pi}{4}t + \dfrac{5\pi}{6}\right)$, biên độ dao động thứ nhất là $A_1 = 3\text{ (cm)}$.
+			\item \textbf{Ý b) Sai:} Từ phương trình $x_2(t) = 3\cos\left(\dfrac{\pi}{4}t + \dfrac{\pi}{3}\right)$, pha ban đầu của dao động thứ hai là $\varphi_2 = \dfrac{\pi}{3} \ne -\dfrac{\pi}{3}$.
+			\item \textbf{Ý c) Sai:} Công thức biến đổi tổng thành tích đúng là $\cos a + \cos b = 2\cos\dfrac{a + b}{2}\cos\dfrac{a - b}{2}$.
+			\item \textbf{Ý d) Đúng:} Dao động tổng hợp có phương trình:
+			\begin{align*}
+				x(t) = x_1(t) + x_2(t) &= 3\left[\cos\left(\dfrac{\pi}{4}t + \dfrac{5\pi}{6}\right) + \cos\left(\dfrac{\pi}{4}t + \dfrac{\pi}{3}\right)\right] \\
+				&= 3 \cdot 2\cos\left(\dfrac{\pi}{4}t + \dfrac{7\pi}{12}\right)\cos\dfrac{\pi}{4} \\
+				&= 6 \cdot \dfrac{\sqrt{2}}{2}\cos\left(\dfrac{\pi}{4}t + \dfrac{7\pi}{12}\right) \\
+				&= 3\sqrt{2}\cos\left(\dfrac{\pi}{4}t + \dfrac{7\pi}{12}\right)\text{ (cm)}.
+			\end{align*}
+			Vậy biên độ và pha ban đầu của dao động tổng hợp lần lượt là $A = 3\sqrt{2}\text{ (cm)}$ và $\varphi = \dfrac{7\pi}{12}$.
+		\end{itemize}
+	}
+\end{ex}

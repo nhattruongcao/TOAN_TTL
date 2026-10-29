@@ -1,0 +1,70 @@
+\setcounter{ex}{0}
+
+% --- CÂU 1 ---
+\begin{ex}
+	Gọi $M, m$ lần lượt là giá trị lớn nhất, giá trị nhỏ nhất của hàm số $y = 2\sin^2 x - 4\sin x + 5$. Tính $M - m$.
+	\shortans{8}
+	\loigiai{
+		Ta có $y = 2\sin^2 x - 4\sin x + 5 = 2(\sin x - 1)^2 + 3$.\\
+		Vì $-1 \le \sin x \le 1, \forall x \in \mathbb{R}$ nên $-2 \le \sin x - 1 \le 0 \implies 0 \le (\sin x - 1)^2 \le 4 \implies 3 \le y \le 11$.\\
+		Do đó $M = 11$ và $m = 3 \implies M - m = 11 - 3 = 8$.
+	}
+\end{ex}
+
+% --- CÂU 2 ---
+\begin{ex}
+	Cho $\sin\alpha + \cos\alpha = \dfrac{1}{2}$. Tính $P = \sin^3\alpha + \cos^3\alpha$ (viết kết quả dạng số thập phân).
+	\shortans{0,6875}
+	\loigiai{
+		Từ $\sin\alpha + \cos\alpha = \dfrac{1}{2}$, bình phương hai vế ta được:
+		$$1 + 2\sin\alpha\cos\alpha = \dfrac{1}{4} \implies \sin\alpha\cos\alpha = -\dfrac{3}{8}.$$
+		Khi đó:
+		$$P = \sin^3\alpha + \cos^3\alpha = (\sin\alpha + \cos\alpha)(\sin^2\alpha - \sin\alpha\cos\alpha + \cos^2\alpha) = \dfrac{1}{2} \cdot \left(1 + \dfrac{3}{8}\right) = \dfrac{11}{16} = 0{,}6875.$$
+	}
+\end{ex}
+
+% --- CÂU 3 ---
+\begin{ex}
+	Người ta xếp các ống tre thành $25$ hàng: hàng trên cùng có $4$ ống, mỗi hàng dưới nhiều hơn hàng liền trên $1$ ống. Có tất cả bao nhiêu ống tre?
+	\shortans{400}
+	\loigiai{
+		Số ống tre ở mỗi hàng lập thành một cấp số cộng với $u_1 = 4, d = 1, n = 25$.\\
+		Tổng số ống tre là:
+		$$S_{25} = 25u_1 + \dfrac{25 \cdot 24}{2}d = 25 \cdot 4 + 300 \cdot 1 = 400\text{ (ống tre)}.$$
+	}
+\end{ex}
+
+% --- CÂU 4 ---
+\begin{ex}
+	Độ cao (mét) của một cabin vòng quay so với mặt đất tại thời điểm $t$ (phút) là $h(t) = 12 + 10\sin\left(\dfrac{\pi}{20}t - \dfrac{\pi}{2}\right)$. Tìm thời điểm đầu tiên $t > 0$ để cabin ở độ cao $17\text{ m}$ (làm tròn đến hàng phần mười).
+	\shortans{13,3}
+	\loigiai{
+		Khi cabin ở độ cao $17\text{ m}$, ta có:
+		$$12 + 10\sin\left(\dfrac{\pi}{20}t - \dfrac{\pi}{2}\right) = 17 \iff \sin\left(\dfrac{\pi}{20}t - \dfrac{\pi}{2}\right) = \dfrac{1}{2}$$
+		$$\iff \hoac{\dfrac{\pi}{20}t - \dfrac{\pi}{2} &= \dfrac{\pi}{6} + k2\pi \\ \dfrac{\pi}{20}t - \dfrac{\pi}{2} &= \dfrac{5\pi}{6} + k2\pi} \iff \hoac{t &= \dfrac{40}{3} + 40k \\ t &= \dfrac{80}{3} + 40k}\ (k \in \mathbb{Z}).$$
+		Thời điểm đầu tiên $t > 0$ ứng với $k = 0$ là $t = \dfrac{40}{3} \approx 13{,}3$ (phút).
+	}
+\end{ex}
+
+% --- CÂU 5 ---
+\begin{ex}
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình thang ($AB \parallel CD,\ AB = 2CD$), $N$ là trung điểm của $SD$, $F$ là giao điểm của $SA$ và $(BCN)$. Biết $\dfrac{SF}{SA} = \dfrac{a}{b}$ với $\dfrac{a}{b}$ là phân số tối giản. Tính $a + b$.
+	\shortans{4}
+	\loigiai{
+		Trong mặt phẳng $(ABCD)$, gọi $E = AD \cap BC$. Khi đó $(BCN) \cap (SAD) = EN$, suy ra $F = SA \cap EN$.\\
+		Vì $CD \parallel AB$ và $CD = \dfrac{1}{2}AB$ nên $D$ là trung điểm của $AE$.\\
+		Trong tam giác $SAE$, kẻ $DK \parallel EF\ (K \in SA)$. Khi đó $K$ là trung điểm của $AF$ và $F$ là trung điểm của $SK$, suy ra:
+		$$SF = FK = KA \implies \dfrac{SF}{SA} = \dfrac{1}{3}.$$
+		Do đó $a = 1, b = 3 \implies a + b = 1 + 3 = 4$.
+	}
+\end{ex}
+
+% --- CÂU 6 ---
+\begin{ex}
+	Độ cao (mét) của một vật trên mặt nước dao động theo thời gian $t$ (giờ) cho bởi $h(t) = 10 + 3\sin\left(\dfrac{\pi t}{8}\right)$. Tính chu kì dao động của $h(t)$ (đơn vị: giờ).
+	\shortans{16}
+	\loigiai{
+		Chu kì dao động của hàm số $h(t) = 10 + 3\sin\left(\dfrac{\pi t}{8}\right)$ là:
+		$$T = \dfrac{2\pi}{\frac{\pi}{8}} = 16\text{ (giờ)}.$$
+	}
+\end{ex}

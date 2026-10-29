@@ -1,0 +1,107 @@
+\setcounter{ex}{0}
+
+% --- CÂU 1 ---
+\begin{ex}
+	Cho phương trình $2\sin 2x + \sqrt{3} = 0\ (*)$. Các mệnh đề sau đúng hay sai?
+	\choiceTFt
+	{\True Phương trình $(*)$ tương đương với $\sin 2x = \sin\left(-\dfrac{\pi}{3}\right)$}
+	{\True Tập nghiệm của $(*)$ là $\left\{-\dfrac{\pi}{6} + k\pi;\ \dfrac{2\pi}{3} + k\pi,\ k \in \mathbb{Z}\right\}$}
+	{Nghiệm dương nhỏ nhất của $(*)$ bằng $\dfrac{5\pi}{6}$}
+	{\True Phương trình $(*)$ có đúng $2$ nghiệm thuộc đoạn $[0; \pi]$}
+	\loigiai{
+		\begin{itemchoice}
+			\itemch \textbf{Đúng.} Ta có $2\sin 2x + \sqrt{3} = 0 \iff \sin 2x = -\dfrac{\sqrt{3}}{2} \iff \sin 2x = \sin\left(-\dfrac{\pi}{3}\right)$.
+			\itemch \textbf{Đúng.} Giải phương trình:
+			$$\sin 2x = \sin\left(-\dfrac{\pi}{3}\right) \iff \hoac{2x &= -\dfrac{\pi}{3} + k2\pi \\ 2x &= \pi - \left(-\dfrac{\pi}{3}\right) + k2\pi} \iff \hoac{x &= -\dfrac{\pi}{6} + k\pi \\ x &= \dfrac{2\pi}{3} + k\pi}\ (k \in \mathbb{Z}).$$
+			Vậy tập nghiệm của phương trình $(*)$ là $S = \left\{-\dfrac{\pi}{6} + k\pi;\ \dfrac{2\pi}{3} + k\pi,\ k \in \mathbb{Z}\right\}$.
+			\itemch \textbf{Sai.} Xét các nghiệm dương nhỏ nhất ở từng họ nghiệm:
+			\begin{itemize}
+				\item Họ $x = -\dfrac{\pi}{6} + k\pi > 0 \iff k \ge 1$, nghiệm dương nhỏ nhất của họ này là $x = \dfrac{5\pi}{6}$ (khi $k = 1$).
+				\item Họ $x = \dfrac{2\pi}{3} + k\pi > 0 \iff k \ge 0$, nghiệm dương nhỏ nhất của họ này là $x = \dfrac{2\pi}{3}$ (khi $k = 0$).
+			\end{itemize}
+			Vì $\dfrac{2\pi}{3} < \dfrac{5\pi}{6}$ nên nghiệm dương nhỏ nhất của $(*)$ bằng $\dfrac{2\pi}{3}$.
+			\itemch \textbf{Đúng.} Trên đoạn $[0; \pi]$, phương trình có đúng $2$ nghiệm là $x = \dfrac{2\pi}{3}$ và $x = \dfrac{5\pi}{6}$.
+		\end{itemchoice}
+	}
+\end{ex}
+
+% --- CÂU 2 ---
+\begin{ex}
+	Cho hàm số $y = \sin x + \sqrt{3}\cos x$. Các mệnh đề sau đúng hay sai?
+	\choiceTFt
+	{\True $y = 2\sin\left(x + \dfrac{\pi}{3}\right)$}
+	{\True Giá trị lớn nhất của hàm số bằng $2$}
+	{Hàm số đã cho là hàm số chẵn}
+	{\True Giá trị nhỏ nhất của hàm số trên đoạn $\left[0; \dfrac{\pi}{2}\right]$ bằng $1$}
+	\loigiai{
+		\begin{itemchoice}
+			\itemch \textbf{Đúng.} Ta có:
+			$$y = \sin x + \sqrt{3}\cos x = 2\left(\dfrac{1}{2}\sin x + \dfrac{\sqrt{3}}{2}\cos x\right) = 2\left(\sin x\cos\dfrac{\pi}{3} + \cos x\sin\dfrac{\pi}{3}\right) = 2\sin\left(x + \dfrac{\pi}{3}\right).$$
+			\itemch \textbf{Đúng.} Vì $-1 \le \sin\left(x + \dfrac{\pi}{3}\right) \le 1, \forall x \in \mathbb{R}$ nên $-2 \le y \le 2$. Vậy giá trị lớn nhất của hàm số bằng $2$.
+			\itemch \textbf{Sai.} Xét tại $x = \dfrac{\pi}{6}$, ta có $y\left(\dfrac{\pi}{6}\right) = 2\sin\dfrac{\pi}{2} = 2$ và $y\left(-\dfrac{\pi}{6}\right) = 2\sin\dfrac{\pi}{6} = 1 \ne y\left(\dfrac{\pi}{6}\right)$ nên hàm số không phải là hàm số chẵn.
+			\itemch \textbf{Đúng.} Với $x \in \left[0; \dfrac{\pi}{2}\right] \implies x + \dfrac{\pi}{3} \in \left[\dfrac{\pi}{3}; \dfrac{5\pi}{6}\right]$.\\
+			Trên đoạn $\left[\dfrac{\pi}{3}; \dfrac{5\pi}{6}\right]$, ta có $\dfrac{1}{2} \le \sin\left(x + \dfrac{\pi}{3}\right) \le 1 \implies 1 \le 2\sin\left(x + \dfrac{\pi}{3}\right) \le 2$.\\
+			Vậy giá trị nhỏ nhất của hàm số trên đoạn $\left[0; \dfrac{\pi}{2}\right]$ bằng $1$ (đạt được tại $x = \dfrac{\pi}{2}$).
+		\end{itemchoice}
+	}
+\end{ex}
+
+% --- CÂU 3 ---
+\begin{ex}
+	Cho cấp số cộng $(u_n)$ thỏa mãn $\heva{u_2 + u_4 &= 14 \\ u_1 + u_6 &= 19.}$ Các mệnh đề sau đúng hay sai?
+	\choiceTFt
+	{\True Số hạng đầu $u_1 = -3$}
+	{\True Công sai $d = 5$}
+	{Số hạng thứ hai mươi $u_{20} = 97$}
+	{\True Tổng $10$ số hạng đầu $S_{10} = 195$}
+	\loigiai{
+		\begin{itemchoice}
+			\itemch \textbf{Đúng.} Gọi $d$ là công sai của cấp số cộng. Từ giả thiết, ta có hệ phương trình:
+			$$\heva{u_2 + u_4 &= 14 \\ u_1 + u_6 &= 19} \iff \heva{(u_1 + d) + (u_1 + 3d) &= 14 \\ u_1 + (u_1 + 5d) &= 19} \iff \heva{2u_1 + 4d &= 14 \\ 2u_1 + 5d &= 19} \iff \heva{u_1 &= -3 \\ d &= 5.}$$
+			Vậy số hạng đầu $u_1 = -3$.
+			\itemch \textbf{Đúng.} Từ hệ trên, công sai $d = 5$.
+			\itemch \textbf{Sai.} Số hạng thứ hai mươi là $u_{20} = u_1 + 19d = -3 + 19 \cdot 5 = 92 \ne 97$.
+			\itemch \textbf{Đúng.} Tổng $10$ số hạng đầu là:
+			$$S_{10} = 10u_1 + \dfrac{10 \cdot 9}{2}d = 10 \cdot (-3) + 45 \cdot 5 = -30 + 225 = 195.$$
+		\end{itemchoice}
+	}
+\end{ex}
+
+% --- CÂU 4 ---
+\begin{ex}
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình thang ($AB \parallel CD,\ AB = 2CD$). Gọi $M, N$ lần lượt là trung điểm của $SA, SB$ (hình vẽ). Các mệnh đề sau đúng hay sai?
+	\begin{center}
+		\begin{tikzpicture}[scale=0.85, font=\footnotesize, line join=round, line cap=round]
+			\coordinate (A) at (0,0);
+			\coordinate (B) at (4,0);
+			\coordinate (D) at (1,1.1);
+			\coordinate (C) at (3,1.1);
+			\coordinate (O) at (intersection of A--C and B--D);
+			\coordinate (S) at (2,3.5);
+			\coordinate (M) at ($(S)!0.5!(A)$);
+			\coordinate (N) at ($(S)!0.5!(B)$);
+			\draw[thick] (S)--(A) (S)--(B) (A)--(B) (M)--(N);
+			\draw[dashed] (S)--(D) (S)--(C) (A)--(D)--(C)--(B) (A)--(C) (B)--(D);
+			\foreach \p/\pos in {S/above, A/below left, B/below right, C/right, D/left, O/below, M/above left, N/above right}
+				\node[\pos] at (\p) {$\p$};
+			\foreach \p in {S,A,B,C,D,O,M,N}
+				\fill (\p) circle (1.2pt);
+		\end{tikzpicture}
+	\end{center}
+	\choiceTFt
+	{\True Giao tuyến của $(SAD)$ và $(SBC)$ là đường thẳng $SE$ với $E = AD \cap BC$}
+	{\True $MNCD$ là hình bình hành}
+	{Giao điểm $F$ của $SC$ và $(ADN)$ thỏa mãn $\dfrac{SF}{SC} = \dfrac{1}{2}$}
+	{$MN \parallel (SAD)$}
+	\loigiai{
+		\begin{itemchoice}
+			\itemch \textbf{Đúng.} Ta có $S \in (SAD) \cap (SBC)$ và $E = AD \cap BC \implies \heva{E \in AD \subset (SAD) \\ E \in BC \subset (SBC)} \implies E \in (SAD) \cap (SBC)$. Vậy $(SAD) \cap (SBC) = SE$.
+			\itemch \textbf{Đúng.} Vì $M, N$ lần lượt là trung điểm của $SA, SB$ nên $MN$ là đường trung bình của tam giác $SAB \implies MN \parallel AB$ và $MN = \dfrac{1}{2}AB$.\\
+			Mặt khác $CD \parallel AB$ và $CD = \dfrac{1}{2}AB$, suy ra $MN \parallel CD$ và $MN = CD$, do đó tứ giác $MNCD$ là hình bình hành.
+			\itemch \textbf{Sai.} Gọi $E = AD \cap BC$. Khi đó $(ADN) \cap (SBC) = NE$, nên giao điểm của $SC$ và $(ADN)$ là $F = SC \cap NE$.\\
+			Trong tam giác $ABE$, vì $CD \parallel AB$ và $CD = \dfrac{1}{2}AB$ nên $CD$ là đường trung bình của tam giác $ABE \implies C$ là trung điểm của $BE$.\\
+			Xét tam giác $SBE$ có $SC$ và $EN$ là hai đường trung tuyến cắt nhau tại $F$, nên $F$ là trọng tâm của tam giác $SBE \implies \dfrac{SF}{SC} = \dfrac{2}{3} \ne \dfrac{1}{2}$.
+			\itemch \textbf{Sai.} Vì $M \in SA \subset (SAD)$ và $N \notin (SAD)$ nên đường thẳng $MN$ cắt mặt phẳng $(SAD)$ tại điểm $M$.
+		\end{itemchoice}
+	}
+\end{ex}

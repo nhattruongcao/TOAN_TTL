@@ -1,0 +1,74 @@
+\setcounter{ex}{0}
+
+% --- CÂU 1 ---
+\begin{ex}
+	Gọi $M, m$ lần lượt là giá trị lớn nhất, giá trị nhỏ nhất của hàm số $y = \sqrt{3}\sin 2x + \cos 2x + 3$. Tính $M \cdot m$.
+	\shortans{5}
+	\loigiai{
+		Ta có:
+		$$y = \sqrt{3}\sin 2x + \cos 2x + 3 = 2\sin\left(2x + \dfrac{\pi}{6}\right) + 3.$$
+		Vì $-1 \le \sin\left(2x + \dfrac{\pi}{6}\right) \le 1, \forall x \in \mathbb{R}$ nên $1 \le y \le 5$.\\
+		Do đó $M = 5, m = 1 \implies M \cdot m = 5 \cdot 1 = 5$.
+	}
+\end{ex}
+
+% --- CÂU 2 ---
+\begin{ex}
+	Cho $\sin a = \dfrac{3}{5}$ với $\dfrac{\pi}{2} < a < \pi$ và $\cos b = \dfrac{5}{13}$ với $-\dfrac{\pi}{2} < b < 0$. Tính $65\sin(a + b)$.
+	\shortans{63}
+	\loigiai{
+		\begin{itemize}
+			\item Vì $\dfrac{\pi}{2} < a < \pi$ nên $\cos a < 0 \implies \cos a = -\sqrt{1 - \sin^2 a} = -\dfrac{4}{5}$.
+			\item Vì $-\dfrac{\pi}{2} < b < 0$ nên $\sin b < 0 \implies \sin b = -\sqrt{1 - \cos^2 b} = -\dfrac{12}{13}$.
+		\end{itemize}
+		Khi đó:
+		$$65\sin(a + b) = 65(\sin a\cos b + \cos a\sin b) = 65\left[\dfrac{3}{5} \cdot \dfrac{5}{13} + \left(-\dfrac{4}{5}\right) \cdot \left(-\dfrac{12}{13}\right)\right] = 15 + 48 = 63.$$
+	}
+\end{ex}
+
+% --- CÂU 3 ---
+\begin{ex}
+	Một người đọc cuốn sách $600$ trang: ngày đầu đọc $12$ trang, mỗi ngày sau đọc nhiều hơn ngày liền trước $4$ trang. Người đó đọc xong cuốn sách trong bao nhiêu ngày?
+	\shortans{15}
+	\loigiai{
+		Số trang sách đọc mỗi ngày lập thành một cấp số cộng với $u_1 = 12$ và công sai $d = 4$.\\
+		Gọi $n$ là số ngày để người đó đọc xong cuốn sách $600$ trang ($n \in \mathbb{N}^*$). Ta có:
+		$$S_n = nu_1 + \dfrac{n(n - 1)}{2}d = 600 \iff 12n + 2n(n - 1) = 600 \iff 2n^2 + 10n - 600 = 0 \iff \hoac{n &= 15\ (\text{nhận}) \\ n &= -20\ (\text{loại}).}$$
+		Vậy người đó đọc xong cuốn sách trong $15$ ngày.
+	}
+\end{ex}
+
+% --- CÂU 4 ---
+\begin{ex}
+	Một vật dao động điều hòa có li độ (cm) tại thời điểm $t$ (giây) là $x = 8\cos\left(2t - \dfrac{\pi}{3}\right)$. Tìm thời điểm đầu tiên $t > 0$ để vật có li độ $x = 4\text{ cm}$ (làm tròn đến hàng phần trăm).
+	\shortans{1,05}
+	\loigiai{
+		Khi vật có li độ $x = 4\text{ cm}$, ta có:
+		$$8\cos\left(2t - \dfrac{\pi}{3}\right) = 4 \iff \cos\left(2t - \dfrac{\pi}{3}\right) = \dfrac{1}{2} \iff \hoac{2t - \dfrac{\pi}{3} &= \dfrac{\pi}{3} + k2\pi \\ 2t - \dfrac{\pi}{3} &= -\dfrac{\pi}{3} + k2\pi} \iff \hoac{t &= \dfrac{\pi}{3} + k\pi \\ t &= k\pi}\ (k \in \mathbb{Z}).$$
+		Thời điểm đầu tiên $t > 0$ là $t = \dfrac{\pi}{3} \approx 1{,}05$ (giây).
+	}
+\end{ex}
+
+% --- CÂU 5 ---
+\begin{ex}
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình thang ($AB \parallel CD$), $M$ thuộc cạnh $SA$ sao cho $SM = 3MA$, $N$ là giao điểm của $SB$ và $(CDM)$. Biết $\dfrac{SN}{SB} = \dfrac{a}{b}$ với $\dfrac{a}{b}$ là phân số tối giản. Tính $a + b$.
+	\shortans{7}
+	\loigiai{
+		Hai mặt phẳng $(CDM)$ và $(SAB)$ có điểm chung là $M$ và lần lượt chứa hai đường thẳng song song $CD \parallel AB$.\\
+		Suy ra giao tuyến của $(CDM)$ và $(SAB)$ là đường thẳng qua $M$ song song với $AB$, cắt $SB$ tại điểm $N$.\\
+		Trong tam giác $SAB$, vì $MN \parallel AB$ nên theo định lí Thales ta có:
+		$$\dfrac{SN}{SB} = \dfrac{SM}{SA} = \dfrac{SM}{SM + MA} = \dfrac{3}{4}.$$
+		Do $\dfrac{3}{4}$ là phân số tối giản nên $a = 3, b = 4 \implies a + b = 3 + 4 = 7$.
+	}
+\end{ex}
+
+% --- CÂU 6 ---
+\begin{ex}
+	Một chiếc bánh xe có bán kính $0{,}3\text{ m}$ lăn không trượt. Khi bánh xe quay đúng $6$ vòng thì xe đi được quãng đường bao nhiêu mét (làm tròn đến hàng phần mười)?
+	\shortans{11,3}
+	\loigiai{
+		Khi bánh xe quay đúng $6$ vòng thì góc quay được là $\alpha = 6 \cdot 2\pi = 12\pi\text{ (rad)}$.\\
+		Quãng đường xe đi được là:
+		$$s = R \cdot \alpha = 0{,}3 \cdot 12\pi = 3{,}6\pi \approx 11{,}3\text{ (m)}.$$
+	}
+\end{ex}

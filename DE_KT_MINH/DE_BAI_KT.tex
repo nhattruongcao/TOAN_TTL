@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\usepackage{eso-pic}
+
+% khung header trên dưới và logo ẩn
+\input{NEWHEADER_TTL.tex}                                             
+
+% Nhãn câu hỏi dạng Tag (TikZ)
+\input{nhan_TTL.tex}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\geometry{
+	left=1.8cm, right=1.8cm, % Lề trái phải 1.8cm
+	top=3.3cm,      % 3.3cm nhường chỗ cho Header
+	bottom=2.5cm,   % 2.5cm cho Footer
+	headheight=1.5cm, 
+	headsep=0.1cm
+}
+
+\usepackage{amsmath,amssymb,mathrsfs,fancyhdr,enumerate,multirow,makecell,currfile,venndiagram}
+\usepackage{tikz-3dplot,tikz,tkz-tab,tabvar}
+\usetikzlibrary{arrows,calc,intersections,angles,decorations,quotes,backgrounds,shapes.geometric,patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\usepackage{varwidth}
+\usepackage{calc}
+\usetikzlibrary{shapes.geometric}
+\usepackage[debai]{ex_test}
+\newtheorem{bt}{Câu}
+\usepackage{tkz-euclide}
+\providecommand{\hoac}[1]{\left[\begin{aligned}#1\end{aligned}\right.}
+\providecommand{\heva}[1]{\left\{\begin{aligned}#1\end{aligned}\right.}
+
+\input{KHUNGTIEUDE_TTL.tex}
+
+% Khai báo các lệnh tiêu đề phần
+\newcommand{\phantracnghiem}{\mySectionBox{PHẦN I}{CÂU TRẮC NGHIỆM NHIỀU PHƯƠNG ÁN LỰA CHỌN}}
+\newcommand{\phandungsai}{\mySectionBox{PHẦN II}{CÂU TRẮC NGHIỆM ĐÚNG SAI}}
+\newcommand{\phantln}{\mySectionBox{PHẦN III}{TRẢ LỜI NGẮN}}
+\newcommand{\phantl}{\mySectionBox{PHẦN IV}{TỰ LUẬN}}
+	
+\usepackage{marvosym}
+\pagestyle{empty}
+\usetikzlibrary{patterns}
+
+\begin{document}
+	\begin{center}
+		\mySectionBox{ĐỀ KT}{ĐỀ ÔN TẬP GIỮA KÌ 1 -- TOÁN 10}
+	\end{center}
+	\phantracnghiem
+	\input{DE_KT_MINH/phanTN.tex}
+	\phandungsai
+	\input{DE_KT_MINH/phanDS.tex}
+	\phantln
+	\input{DE_KT_MINH/phanTLN.tex}
+	\phantl
+	\input{DE_KT_MINH/phanTL.tex}
+
+\end{document}

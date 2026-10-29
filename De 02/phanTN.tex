@@ -1,0 +1,200 @@
+\setcounter{ex}{0}
+% --- CÂU 1 ---
+\begin{ex}
+	Rút gọn biểu thức: $\sin(a - 19^\circ)\cdot\cos(a + 11^\circ) - \sin(a + 11^\circ)\cdot\cos(a - 19^\circ)$, ta được
+	\choice
+	{$\sin 2a$}
+	{$\cos 2a$}
+	{\True $-\dfrac{1}{2}$}
+	{$\dfrac{1}{2}$}
+	\loigiai{
+		Áp dụng công thức cộng đối với hàm số sin: $\sin x \cos y - \cos x \sin y = \sin(x - y)$, ta có:
+		\begin{align*}
+			\sin(a - 19^\circ)\cos(a + 11^\circ) - \sin(a + 11^\circ)\cos(a - 19^\circ) &= \sin\left[(a - 19^\circ) - (a + 11^\circ)\right] \\
+			&= \sin(-30^\circ) = -\sin 30^\circ = -\dfrac{1}{2}.
+		\end{align*}
+	}
+\end{ex}
+
+% --- CÂU 2 ---
+\begin{ex}
+	Nếu biết $\sin\alpha = \dfrac{5}{13}\left(\dfrac{\pi}{2} < \alpha < \pi\right)$, $\cos\beta = \dfrac{3}{5}\left(0 < \beta < \dfrac{\pi}{2}\right)$ thì giá trị đúng của $\cos(\alpha - \beta)$ là:
+	\choice
+	{$\dfrac{16}{65}$}
+	{\True $-\dfrac{16}{65}$}
+	{$\dfrac{18}{65}$}
+	{$-\dfrac{18}{65}$}
+	\loigiai{
+		\begin{itemize}
+			\item Vì $\dfrac{\pi}{2} < \alpha < \pi$ nên $\cos\alpha < 0$. Ta có:
+			$$\cos\alpha = -\sqrt{1 - \sin^2\alpha} = -\sqrt{1 - \left(\dfrac{5}{13}\right)^2} = -\dfrac{12}{13}.$$
+			\item Vì $0 < \beta < \dfrac{\pi}{2}$ nên $\sin\beta > 0$. Ta có:
+			$$\sin\beta = \sqrt{1 - \cos^2\beta} = \sqrt{1 - \left(\dfrac{3}{5}\right)^2} = \dfrac{4}{5}.$$
+		\end{itemize}
+		Khi đó, áp dụng công thức cộng:
+		$$\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta = \left(-\dfrac{12}{13}\right)\cdot\dfrac{3}{5} + \dfrac{5}{13}\cdot\dfrac{4}{5} = -\dfrac{36}{65} + \dfrac{20}{65} = -\dfrac{16}{65}.$$
+	}
+\end{ex}
+
+% --- CÂU 3 ---
+\begin{ex}
+	Nếu biết $\sin a = \dfrac{8}{17}$, $\tan b = \dfrac{5}{12}$ và $a, b$ đều là các góc nhọn và dương thì $\sin(a - b)$ là:
+	\choice
+	{$\dfrac{20}{220}$}
+	{$-\dfrac{20}{220}$}
+	{$\dfrac{22}{221}$}
+	{\True $\dfrac{21}{221}$}
+	\loigiai{
+		Vì $a, b$ là các góc nhọn dương $\left(0 < a, b < \dfrac{\pi}{2}\right)$ nên các giá trị lượng giác của $a, b$ đều dương:
+		\begin{itemize}
+			\item $\cos a = \sqrt{1 - \sin^2 a} = \sqrt{1 - \left(\dfrac{8}{17}\right)^2} = \dfrac{15}{17}$.
+			\item $\dfrac{1}{\cos^2 b} = 1 + \tan^2 b = 1 + \left(\dfrac{5}{12}\right)^2 = \dfrac{169}{144} \implies \cos b = \dfrac{12}{13}$.
+			\item $\sin b = \tan b \cdot \cos b = \dfrac{5}{12} \cdot \dfrac{12}{13} = \dfrac{5}{13}$.
+		\end{itemize}
+		Do đó:
+		$$\sin(a - b) = \sin a\cos b - \cos a\sin b = \dfrac{8}{17}\cdot\dfrac{12}{13} - \dfrac{15}{17}\cdot\dfrac{5}{13} = \dfrac{96 - 75}{221} = \dfrac{21}{221}.$$
+	}
+\end{ex}
+
+% --- CÂU 4 ---
+\begin{ex}
+	Khẳng định nào dưới đây \textbf{\textit{SAI}}?
+	\choice
+	{$2\sin^2 a = 1 - \cos 2a$}
+	{\True $\cos 2a = 2\cos a - 1$}
+	{$\sin 2a = 2\sin a\cos a$}
+	{$\sin(a + b) = \sin a\cos b + \sin b\cos a$}
+	\loigiai{
+		Theo công thức nhân đôi, ta có $\cos 2a = 2\cos^2 a - 1$. Do đó khẳng định $\cos 2a = 2\cos a - 1$ là sai.
+	}
+\end{ex}
+
+% --- CÂU 5 ---
+\begin{ex}
+	Công thức nào sau đây đúng với mọi $x$?
+	\choice
+	{\True $\sin 2x = 2\sin x\cos x$}
+	{$\sin 2x = \sin x\cos x$}
+	{$\sin 2x = 2\cos x$}
+	{$\sin 2x = 2\sin x$}
+	\loigiai{
+		Theo công thức nhân đôi của hàm số sin, với mọi $x \in \mathbb{R}$ ta luôn có $\sin 2x = 2\sin x\cos x$.
+	}
+\end{ex}
+
+% --- CÂU 6 ---
+\begin{ex}
+	Cho $\cos x = \dfrac{4}{5}$, $x \in \left(-\dfrac{\pi}{2}; 0\right)$. Giá trị của $\sin 2x$ là
+	\choice
+	{$\dfrac{24}{25}$}
+	{\True $-\dfrac{24}{25}$}
+	{$-\dfrac{1}{5}$}
+	{$\dfrac{1}{5}$}
+	\loigiai{
+		Vì $x \in \left(-\dfrac{\pi}{2}; 0\right)$ nên $\sin x < 0$. Ta có:
+		$$\sin x = -\sqrt{1 - \cos^2 x} = -\sqrt{1 - \left(\dfrac{4}{5}\right)^2} = -\dfrac{3}{5}.$$
+		Khi đó:
+		$$\sin 2x = 2\sin x\cos x = 2 \cdot \left(-\dfrac{3}{5}\right) \cdot \dfrac{4}{5} = -\dfrac{24}{25}.$$
+	}
+\end{ex}
+
+% --- CÂU 7 ---
+\begin{ex}
+	Mệnh đề nào sau đây sai?
+	\choice
+	{$\cos a\cos b = \dfrac{1}{2}\left[\cos(a - b) + \cos(a + b)\right]$}
+	{\True $\sin a\cos b = \dfrac{1}{2}\left[\sin(a - b) - \cos(a + b)\right]$}
+	{$\sin a\sin b = \dfrac{1}{2}\left[\cos(a - b) - \cos(a + b)\right]$}
+	{$\sin a\cos b = \dfrac{1}{2}\left[\sin(a - b) + \sin(a + b)\right]$}
+	\loigiai{
+		Theo công thức biến đổi tích thành tổng:
+		$$\sin a\cos b = \dfrac{1}{2}\left[\sin(a - b) + \sin(a + b)\right].$$
+		Do đó mệnh đề $\sin a\cos b = \dfrac{1}{2}\left[\sin(a - b) - \cos(a + b)\right]$ là sai.
+	}
+\end{ex}
+
+% --- CÂU 8 ---
+\begin{ex}
+	Cho $\cos 2\alpha = \dfrac{1}{3}$. Tính giá trị của biểu thức $P = \cos\alpha\cdot\cos 3\alpha$.
+	\choice
+	{$P = \dfrac{2}{9}$}
+	{$P = \dfrac{7}{9}$}
+	{$P = \dfrac{5}{9}$}
+	{\True $P = \dfrac{-2}{9}$}
+	\loigiai{
+		Áp dụng công thức biến đổi tích thành tổng và công thức nhân đôi:
+		$$P = \cos\alpha\cos 3\alpha = \dfrac{1}{2}(\cos 4\alpha + \cos 2\alpha) = \dfrac{1}{2}(2\cos^2 2\alpha - 1 + \cos 2\alpha).$$
+		Thay $\cos 2\alpha = \dfrac{1}{3}$ vào biểu thức $P$, ta được:
+		$$P = \dfrac{1}{2}\left[2\cdot\left(\dfrac{1}{3}\right)^2 - 1 + \dfrac{1}{3}\right] = \dfrac{1}{2}\left(\dfrac{2}{9} - 1 + \dfrac{3}{9}\right) = \dfrac{1}{2}\cdot\left(-\dfrac{4}{9}\right) = -\dfrac{2}{9}.$$
+	}
+\end{ex}
+
+% --- CÂU 9 ---
+\begin{ex}
+	Biết $\cos a = \dfrac{1}{3}$, $\cos b = \dfrac{1}{5}$. Giá trị $\cos(a + b)\cdot\cos(a - b)$ bằng:
+	\choice
+	{$-\dfrac{113}{225}$}
+	{$-\dfrac{111}{225}$}
+	{$-\dfrac{117}{144}$}
+	{\True $-\dfrac{191}{225}$}
+	\loigiai{
+		Áp dụng công thức biến đổi tích thành tổng và công thức hạ bậc:
+		\begin{align*}
+			\cos(a + b)\cdot\cos(a - b) &= \dfrac{1}{2}(\cos 2a + \cos 2b) \\
+			&= \dfrac{1}{2}\left[(2\cos^2 a - 1) + (2\cos^2 b - 1)\right] \\
+			&= \cos^2 a + \cos^2 b - 1.
+		\end{align*}
+		Thay $\cos a = \dfrac{1}{3}$ và $\cos b = \dfrac{1}{5}$ vào, ta có:
+		$$\cos(a + b)\cdot\cos(a - b) = \left(\dfrac{1}{3}\right)^2 + \left(\dfrac{1}{5}\right)^2 - 1 = \dfrac{1}{9} + \dfrac{1}{25} - 1 = -\dfrac{191}{225}.$$
+	}
+\end{ex}
+
+% --- CÂU 10 ---
+\begin{ex}
+	Cho các công thức sau, công thức nào đúng?
+	\choice
+	{$\sin u + \sin v = \sin\dfrac{u + v}{2}\cos\dfrac{u - v}{2}$}
+	{\True $\sin u + \sin v = 2\sin\dfrac{u + v}{2}\cos\dfrac{u - v}{2}$}
+	{$\sin u - \sin v = \sin\dfrac{u + v}{2}\cos\dfrac{u - v}{2}$}
+	{$\sin u + \sin v = 2\sin\dfrac{u + v}{2}\sin\dfrac{u - v}{2}$}
+	\loigiai{
+		Theo công thức biến đổi tổng thành tích:
+		$$\sin u + \sin v = 2\sin\dfrac{u + v}{2}\cos\dfrac{u - v}{2}.$$
+	}
+\end{ex}
+
+% --- CÂU 11 ---
+\begin{ex}
+	Rút gọn biểu thức sau $B = \cos\left(2a + \dfrac{\pi}{3}\right) + \cos\left(2a - \dfrac{\pi}{3}\right)$
+	\choice
+	{$\sin 2a$}
+	{\True $\cos 2a$}
+	{$3\sin a$}
+	{$-\sin 2a$}
+	\loigiai{
+		Áp dụng công thức biến đổi tổng thành tích $\cos u + \cos v = 2\cos\dfrac{u+v}{2}\cos\dfrac{u-v}{2}$, ta có:
+		$$B = 2\cos\dfrac{\left(2a + \dfrac{\pi}{3}\right) + \left(2a - \dfrac{\pi}{3}\right)}{2}\cos\dfrac{\left(2a + \dfrac{\pi}{3}\right) - \left(2a - \dfrac{\pi}{3}\right)}{2} = 2\cos 2a \cdot \cos\dfrac{\pi}{3} = 2\cos 2a \cdot \dfrac{1}{2} = \cos 2a.$$
+	}
+\end{ex}
+
+% --- CÂU 12 ---
+\begin{ex}
+	Phương trình tổng quát của một vật dao động điều hoà cho bởi công thức $x(t) = A\cos(\omega t + \varphi)$, trong đó $t$ là thời điểm (tính bằng giây), $x(t)$ là li độ của vật tại thời điểm $t$, $A$ là biên độ dao động ($A > 0$) và $\varphi \in [-\pi; \pi]$ là pha ban đầu của dao động. Xét hai dao động điều hoà có phương trình:
+	$$x_1(t) = 7\cos\left(t + \dfrac{\pi}{9}\right)\text{ (cm)}, \quad x_2(t) = 7\cos\left(t + \dfrac{\pi}{3}\right)\text{ (cm)}.$$
+	Tìm dao động tổng hợp $x(t) = x_1(t) + x_2(t)$ và sử dụng công thức biến đổi tổng thành tích để tìm pha ban đầu của dao động tổng hợp này.
+	\choice
+	{$\dfrac{10\pi}{27}$}
+	{\True $\dfrac{2\pi}{9}$}
+	{$\dfrac{12\pi}{25}$}
+	{$\dfrac{\pi}{27}$}
+	\loigiai{
+		Phương trình dao động tổng hợp là:
+		\begin{align*}
+			x(t) = x_1(t) + x_2(t) &= 7\left[\cos\left(t + \dfrac{\pi}{9}\right) + \cos\left(t + \dfrac{\pi}{3}\right)\right] \\
+			&= 7 \cdot 2\cos\dfrac{\left(t + \dfrac{\pi}{9}\right) + \left(t + \dfrac{\pi}{3}\right)}{2}\cos\dfrac{\left(t + \dfrac{\pi}{9}\right) - \left(t + \dfrac{\pi}{3}\right)}{2} \\
+			&= 14\cos\left(t + \dfrac{2\pi}{9}\right)\cos\left(-\dfrac{\pi}{9}\right) \\
+			&= 14\cos\dfrac{\pi}{9}\cos\left(t + \dfrac{2\pi}{9}\right)\text{ (cm)}.
+		\end{align*}
+		Vì $A = 14\cos\dfrac{\pi}{9} > 0$ và $\dfrac{2\pi}{9} \in [-\pi; \pi]$ nên pha ban đầu của dao động tổng hợp là $\varphi = \dfrac{2\pi}{9}$.
+	}
+\end{ex}

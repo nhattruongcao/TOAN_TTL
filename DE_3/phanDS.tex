@@ -1,0 +1,96 @@
+\setcounter{ex}{0}
+
+% --- CÂU 1 ---
+\begin{ex}
+	Cho phương trình $\tan\left(x + \dfrac{\pi}{6}\right) = \sqrt{3}\ (*)$. Các mệnh đề sau đúng hay sai?
+	\choiceTFt
+	{\True Phương trình $(*)$ tương đương với $\tan\left(x + \dfrac{\pi}{6}\right) = \tan\dfrac{\pi}{3}$}
+	{Tập nghiệm của $(*)$ là $\left\{\dfrac{\pi}{3} + k\pi,\ k \in \mathbb{Z}\right\}$}
+	{\True Tổng các nghiệm của $(*)$ thuộc khoảng $(0; 3\pi)$ bằng $\dfrac{7\pi}{2}$}
+	{\True Nghiệm âm lớn nhất của $(*)$ bằng $-\dfrac{5\pi}{6}$}
+	\loigiai{
+		\begin{itemchoice}
+			\itemch \textbf{Đúng.} Vì $\tan\dfrac{\pi}{3} = \sqrt{3}$ nên phương trình $(*)$ tương đương với $\tan\left(x + \dfrac{\pi}{6}\right) = \tan\dfrac{\pi}{3}$.
+			\itemch \textbf{Sai.} Ta có:
+			$$\tan\left(x + \dfrac{\pi}{6}\right) = \tan\dfrac{\pi}{3} \iff x + \dfrac{\pi}{6} = \dfrac{\pi}{3} + k\pi \iff x = \dfrac{\pi}{6} + k\pi\ (k \in \mathbb{Z}).$$
+			Vậy tập nghiệm của $(*)$ là $\left\{\dfrac{\pi}{6} + k\pi,\ k \in \mathbb{Z}\right\}$.
+			\itemch \textbf{Đúng.} Các nghiệm của $(*)$ thuộc khoảng $(0; 3\pi)$ ứng với $k \in \{0; 1; 2\}$ là $\dfrac{\pi}{6},\ \dfrac{7\pi}{6},\ \dfrac{13\pi}{6}$.\\
+			Tổng các nghiệm này bằng $\dfrac{\pi}{6} + \dfrac{7\pi}{6} + \dfrac{13\pi}{6} = \dfrac{21\pi}{6} = \dfrac{7\pi}{2}$.
+			\itemch \textbf{Đúng.} Với $x = \dfrac{\pi}{6} + k\pi < 0 \iff k \le -1$, nghiệm âm lớn nhất ứng với $k = -1$ là $x = -\dfrac{5\pi}{6}$.
+		\end{itemchoice}
+	}
+\end{ex}
+
+% --- CÂU 2 ---
+\begin{ex}
+	Cho hàm số $y = 2\sin^2 x - 3\sin x + 1$. Các mệnh đề sau đúng hay sai?
+	\choiceTFt
+	{\True Đặt $t = \sin x$ thì $y = 2t^2 - 3t + 1$ với $t \in [-1; 1]$}
+	{\True Giá trị lớn nhất của hàm số bằng $6$}
+	{Giá trị nhỏ nhất của hàm số bằng $0$}
+	{\True Hàm số đạt giá trị nhỏ nhất khi $\sin x = \dfrac{3}{4}$}
+	\loigiai{
+		\begin{itemchoice}
+			\itemch \textbf{Đúng.} Đặt $t = \sin x$, vì $-1 \le \sin x \le 1$ nên $t \in [-1; 1]$ và $y = f(t) = 2t^2 - 3t + 1$.
+			\itemch \textbf{Đúng.} Hàm số bậc hai $f(t) = 2t^2 - 3t + 1$ trên đoạn $[-1; 1]$ có hoành độ đỉnh $t = \dfrac{3}{4} \in [-1; 1]$.\\
+			Ta có $f(-1) = 6,\ f(1) = 0,\ f\left(\dfrac{3}{4}\right) = -\dfrac{1}{8}$. Vậy giá trị lớn nhất của hàm số bằng $6$ (khi $t = \sin x = -1$).
+			\itemch \textbf{Sai.} Giá trị nhỏ nhất của hàm số bằng $-\dfrac{1}{8} \ne 0$.
+			\itemch \textbf{Đúng.} Hàm số đạt giá trị nhỏ nhất bằng $-\dfrac{1}{8}$ khi $t = \sin x = \dfrac{3}{4}$.
+		\end{itemchoice}
+	}
+\end{ex}
+
+% --- CÂU 3 ---
+\begin{ex}
+	Cho cấp số cộng $(u_n)$ có $u_1 = -5$ và công sai $d = 3$. Các mệnh đề sau đúng hay sai?
+	\choiceTFt
+	{\True Số hạng thứ tám $u_8 = 16$}
+	{\True Số hạng tổng quát $u_n = 3n - 8$}
+	{\True Số hạng thứ mười hai $u_{12} = 28$}
+	{Tổng $10$ số hạng đầu $S_{10} = 55$}
+	\loigiai{
+		\begin{itemchoice}
+			\itemch \textbf{Đúng.} $u_8 = u_1 + 7d = -5 + 7 \cdot 3 = 16$.
+			\itemch \textbf{Đúng.} $u_n = u_1 + (n - 1)d = -5 + 3(n - 1) = 3n - 8$.
+			\itemch \textbf{Đúng.} $u_{12} = 3 \cdot 12 - 8 = 28$.
+			\itemch \textbf{Sai.} Tổng $10$ số hạng đầu là $S_{10} = 10u_1 + \dfrac{10 \cdot 9}{2}d = 10 \cdot (-5) + 45 \cdot 3 = 85 \ne 55$.
+		\end{itemchoice}
+	}
+\end{ex}
+
+% --- CÂU 4 ---
+\begin{ex}
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành tâm $O$. Gọi $M, N$ lần lượt là trung điểm của $SA, SC$; $I = MN \cap SO$ (hình vẽ). Các mệnh đề sau đúng hay sai?
+	\begin{center}
+		\begin{tikzpicture}[scale=0.85, font=\footnotesize, line join=round, line cap=round]
+			\coordinate (A) at (0,0);
+			\coordinate (B) at (3.2,0);
+			\coordinate (D) at (1.3,1.1);
+			\coordinate (C) at (4.5,1.1);
+			\coordinate (O) at ($(A)!0.5!(C)$);
+			\coordinate (S) at (2.2,3.4);
+			\coordinate (M) at ($(S)!0.5!(A)$);
+			\coordinate (N) at ($(S)!0.5!(C)$);
+			\coordinate (I) at ($(S)!0.5!(O)$);
+			\draw[thick] (S)--(A) (S)--(B) (S)--(C) (A)--(B)--(C) (M)--(B)--(N);
+			\draw[dashed] (S)--(D) (A)--(D)--(C) (A)--(C) (B)--(D) (S)--(O) (M)--(N);
+			\foreach \p/\pos in {S/above, A/below left, B/below, C/right, D/left, O/below, M/above left, N/above right}
+				\node[\pos] at (\p) {$\p$};
+			\foreach \p in {S,A,B,C,D,O,M,N,I}
+				\fill (\p) circle (1.2pt);
+		\end{tikzpicture}
+	\end{center}
+	\choiceTFt
+	{\True $MN \parallel (ABCD)$}
+	{$MN \parallel (SBD)$}
+	{\True $I$ là trung điểm của $SO$}
+	{Thiết diện của hình chóp cắt bởi mặt phẳng $(BMN)$ là một tam giác}
+	\loigiai{
+		\begin{itemchoice}
+			\itemch \textbf{Đúng.} $MN$ là đường trung bình của tam giác $SAC \implies MN \parallel AC \subset (ABCD) \implies MN \parallel (ABCD)$.
+			\itemch \textbf{Sai.} Đường thẳng $MN$ cắt $SO \subset (SBD)$ tại điểm $I$ nên $MN$ cắt mặt phẳng $(SBD)$.
+			\itemch \textbf{Đúng.} Trong tam giác $SAC$, vì $M$ là trung điểm của $SA$ và $MI \parallel AO\ (I \in SO)$ nên $I$ là trung điểm của $SO$.
+			\itemch \textbf{Sai.} Trong mặt phẳng $(SBD)$, tia $BI$ cắt cạnh $SD$ tại điểm $P$ (nằm giữa $S$ và $D$). Khi đó thiết diện của hình chóp cắt bởi mặt phẳng $(BMN)$ là tứ giác $BMPN$, không phải là tam giác.
+		\end{itemchoice}
+	}
+\end{ex}

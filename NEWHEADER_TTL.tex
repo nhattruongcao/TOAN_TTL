@@ -1,0 +1,165 @@
+%\documentclass[12pt,a4paper]{article}
+
+% --- KHAI BÁO TIẾNG VIỆT & FONT CHỮ ---
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage[T5]{fontenc}
+\pdfmapfile{+urwvn.map}
+\pdfmapfile{+vnrtext.map}
+\usepackage{mathptmx}
+
+% --- THIẾT LẬP LỀ TRANG (KHÔNG BỊ XUNG ĐỘT GÓI GEOMETRY) ---
+\usepackage{geometry}
+\geometry{a4paper, left=1.8cm, right=1.8cm, top=2.2cm, bottom=2.2cm}
+
+% --- CÁC GÓI TOÁN VÀ ĐỒ HỌA ---
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc, shadings}
+\usepackage{eso-pic}
+
+% Nội dung địa chỉ/thông tin ở footer (mặc định là địa chỉ cơ sở, có thể ghi đè bằng \gdef\footerAddress{...} cho từng đề riêng biệt)
+\providecommand{\footerAddress}{58 Nguyễn Thị Sáu, Bà Điểm, Hóc Môn, TPHCM}
+
+%% --- TẮT ĐƯỜNG GẠCH MẶC ĐỊNH ---
+%\usepackage{fancyhdr}
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}
+
+% --- BẢNG MÀU THIẾT KẾ (CHUYỂN SANG XANH NAVY) ---
+\definecolor{mainBurgundy}{RGB}{20, 32, 85}   % Xanh Navy đậm chủ đạo
+\definecolor{darkBurgundy}{RGB}{10, 16, 45}   % Xanh Navy sẫm viền bóng 3D
+\definecolor{bgPaper}{RGB}{246, 249, 255}     % Nền xanh nhạt / kem sáng
+\definecolor{gridLine}{RGB}{204, 214, 230}    % Lưới kỹ thuật blueprint
+\definecolor{shadowBeige}{RGB}{206, 216, 235} % Vệt bóng phản quang 3D
+
+% --- LỚP NỀN TRANG TRÍ (HEADER FULL VIỀN & FOOTER VÒM CONG) ---
+\AddToShipoutPictureBG{%
+	\begin{tikzpicture}[remember picture, overlay]
+		% ======================== 1. DẢI HEADER MỚI (PHONG CÁCH HÌNH HỌC KỸ THUẬT) ========================
+		\coordinate (NW) at (current page.north west);
+		\coordinate (NE) at (current page.north east);
+		\coordinate (SW) at ([yshift=-1.55cm]current page.north west);
+		\coordinate (SE) at ([yshift=-1.55cm]current page.north east);
+		
+		% 1.1 Nền chung màu xanh nhạt trải full chiều ngang 100%
+		\fill[bgPaper] (NW) rectangle (SE);
+		
+		% 1.2 Mảng lưới toạ độ cực / phối cảnh cong kỹ thuật bên phải
+		\begin{scope}
+			\clip ([xshift=-8.2cm]NW) to[out=-15, in=120] ([xshift=-5.2cm]SW) -- (SE) -- (NE) -- cycle;
+			\fill[shadowBeige!30] ([xshift=-8.2cm]NW) rectangle (SE);
+			% Lưới nan quạt & vòng đồng tâm phối cảnh
+			\foreach \r in {1.0, 2.2, 3.4, 4.6, 5.8} {
+				\draw[gridLine, line width=0.4pt] ([xshift=-1.5cm]NE) arc (180:270:\r cm);
+			}
+			\foreach \ang in {195, 210, 225, 240, 255} {
+				\draw[gridLine, line width=0.35pt] ([xshift=-1.5cm]NE) -- ++(\ang:6.5cm);
+			}
+			\draw[gridLine, line width=0.85pt] ([xshift=-8.2cm]NW) to[out=-15, in=120] ([xshift=-5.2cm]SW);
+		\end{scope}
+		
+		% 1.3 Lớp vát bóng đổ 3D hai tầng
+		\fill[shadowBeige] ([xshift=5.1cm]NW) -- ([xshift=5.8cm]NW) -- ([xshift=4.9cm]SW) -- ([xshift=4.2cm]SW) -- cycle;
+		\fill[darkBurgundy!60] ([xshift=4.8cm]NW) -- ([xshift=5.25cm]NW) -- ([xshift=4.45cm]SW) -- ([xshift=4.0cm]SW) -- cycle;
+		
+		% 1.4 Khối màu xanh Navy đa giác góc vát bên trái
+		\fill[mainBurgundy] (NW) -- ([xshift=4.9cm]NW) -- ([xshift=4.15cm]SW) -- (SW) -- cycle;
+		\draw[white!40, line width=0.5pt] ([xshift=4.75cm]NW) -- ([xshift=4.0cm]SW);
+		
+		% Chữ thương hiệu bên trong khối xanh
+		\node[text=white, anchor=center] at ([xshift=2.35cm, yshift=-0.56cm]NW) {
+			{\fontsize{17}{21}\selectfont\textbf{\rmfamily TOÁN }}
+		};
+		\node[text=white!90, anchor=center] at ([xshift=2.35cm, yshift=-1.12cm]NW) {
+			{\fontsize{6.5}{8}\selectfont\textbf{\textsf{ĐỀ CƯƠNG ÔN TẬP}}}
+		};
+		
+	% 1.5 CỤM TIÊU ĐỀ CHÍNH GIỮA (TỰ ĐỘNG BÁM THEO CHIỀU DÀI CHỮ & THẲNG TẮP)
+
+	\node[text=mainBurgundy, font=\bfseries\fontsize{11.5}{14}\selectfont] (tieude) at ([xshift=0.8cm, yshift=-0.58cm]current page.north) {KHƠI NGUỒN TRÍ TUỆ - HƯỚNG TỚI TƯƠNG LAI};
+	
+	\coordinate (TamVoCuc) at ([yshift=-0.28cm]tieude.south);
+	
+	% Thanh gạch ngang bên trái
+	\draw[mainBurgundy!80, line width=0.7pt] 
+	([yshift=-0.28cm]tieude.south west) -- ([xshift=-0.35cm]TamVoCuc);
+	
+	% Ký hiệu vô cực ở giữa
+	\node[text=mainBurgundy, font=\small, anchor=center] at (TamVoCuc) {$\boldsymbol{\infty}$};
+	
+	% Thanh gạch ngang bên phải
+	\draw[mainBurgundy!80, line width=0.7pt] 
+	([xshift=0.35cm]TamVoCuc) -- ([yshift=-0.28cm]tieude.south east);
+
+		% 1.7 Khối chữ Năm học & Khung thẻ viền mảnh
+		\draw[mainBurgundy!40, line width=0.6pt, rounded corners=1.5pt] 
+		([xshift=-3.25cm, yshift=-0.22cm]NE) rectangle ([xshift=-0.45cm, yshift=-1.33cm]NE);
+		\node[anchor=center, align=center] at ([xshift=-1.85cm, yshift=-0.78cm]NE) {
+			{\fontsize{7}{9}\selectfont\rmfamily\color{mainBurgundy!90} NĂM HỌC}\\[2.5pt]
+			{\fontsize{10.5}{13}\selectfont\textbf{\textsf{\color{mainBurgundy} 2026 -- 2027}}}
+		};
+		
+		% 1.8 Đường viền bóng chân Header chuyển màu sắc nét
+		\shade[left color=mainBurgundy, right color=darkBurgundy!85] (SW) rectangle ([yshift=-2pt]SE);
+		
+		% ======================== 2. DẢI FOOTER CHÂN TRANG NỀN CARO FULL 100% ========================
+		\coordinate (FSW) at (current page.south west);
+		\coordinate (FSE) at (current page.south east);
+		\coordinate (FNW) at ([yshift=1.55cm]current page.south west);
+		\coordinate (FNE) at ([yshift=1.55cm]current page.south east);
+		
+		% 2.1 Nền chung màu xanh sáng
+		\fill[bgPaper] (FSW) rectangle (FNE);
+		
+		% 2.2 Lưới caro kỹ thuật trải kín full 100% chiều ngang chân trang
+		\begin{scope}
+			\clip (FSW) rectangle (FNE);
+			\draw[gridLine, line width=0.4pt] ([yshift=-0.2cm]FSW) grid[step=0.35cm] ([yshift=0.2cm]FNE);
+		\end{scope}
+		
+		% 2.3 Đường viền mảnh màu xanh Navy chạy full mép trên Footer
+		\draw[mainBurgundy, line width=0.9pt] (FNW) -- (FNE);
+		
+		% 2.4 Icon cuốn sách mở màu xanh Navy bên trái (đặt trên nền caro)
+		\begin{scope}[shift={([xshift=1.6cm, yshift=0.75cm]FSW)}, scale=0.45]
+			\fill[bgPaper, opacity=0.9] (-1.2,-0.9) rectangle (1.2,0.9); % Nền nhẹ lót icon nét hơn
+			\draw[mainBurgundy, line width=1.1pt, rounded corners=0.8pt] 
+			(-1.1,-0.8) -- (-1.1,0.8) -- (-0.1,0.55) -- (-0.1,-1.05) -- cycle;
+			\draw[mainBurgundy, line width=1.1pt, rounded corners=0.8pt] 
+			(1.1,-0.8) -- (1.1,0.8) -- (0.1,0.55) -- (0.1,-1.05) -- cycle;
+			\draw[mainBurgundy, line width=0.8pt] (-0.1,-1.05) to[out=-20,in=200] (0.1,-1.05);
+			\draw[mainBurgundy, line width=0.6pt] (-0.9,-0.35) -- (-0.3,-0.5);
+			\draw[mainBurgundy, line width=0.6pt] (-0.9,0.05) -- (-0.3,-0.1);
+			\draw[mainBurgundy, line width=0.6pt] (-0.9,0.45) -- (-0.3,0.3);
+			\draw[mainBurgundy, line width=0.6pt] (0.9,-0.35) -- (0.3,-0.5);
+			\draw[mainBurgundy, line width=0.6pt] (0.9,0.05) -- (0.3,-0.1);
+			\draw[mainBurgundy, line width=0.6pt] (0.9,0.45) -- (0.3,0.3);
+		\end{scope}
+		
+		% 2.5 Dòng chữ tiêu đề tài liệu (chữ xanh Navy)
+		\node[anchor=west, text=mainBurgundy, fill=bgPaper, fill opacity=0.85, text opacity=1, inner sep=2pt] (titleFoot) 
+		at ([xshift=2.4cm, yshift=0.75cm]FSW) {
+			{\fontsize{9.5}{12}\selectfont\textbf{\rmfamily \footerAddress}}
+		};
+		
+		% 2.6 Khối chữ TRANG và số trang bên phải
+		\node[anchor=east, align=center, fill=bgPaper, fill opacity=0.85, text opacity=1, inner sep=2pt] (pageFoot) 
+		at ([xshift=-1.6cm, yshift=0.75cm]FSE) {
+			{\fontsize{7.5}{9}\selectfont\rmfamily\color{mainBurgundy!90} TRANG}\hspace{6pt}%
+			{\fontsize{13}{16}\selectfont\textbf{\rmfamily\color{mainBurgundy} \thepage}}
+		};
+		
+		% 2.7 Đường chỉ phân cách ở giữa nối từ Tiêu đề sang Số trang, có hạt kim cương xanh ở tâm
+		\path (titleFoot.east) -- (pageFoot.west) coordinate[midway] (midCenter);
+		\draw[mainBurgundy!80, line width=0.65pt] ([xshift=0.35cm]titleFoot.east) -- ([xshift=-0.25cm]midCenter);
+		\node[draw=mainBurgundy, fill=mainBurgundy, rotate=45, inner sep=1.4pt] at (midCenter) {};
+		\draw[mainBurgundy!80, line width=0.65pt] ([xshift=0.25cm]midCenter) -- ([xshift=-0.35cm]pageFoot.west);
+	\end{tikzpicture}%
+}
+\AddToShipoutPictureBG{%
+	\begin{tikzpicture}[remember picture, overlay]
+		\node[opacity=0.09] at (current page.center) {\includegraphics[width=1.0\paperwidth]{LOGOTTL.png}};
+	\end{tikzpicture}
+}

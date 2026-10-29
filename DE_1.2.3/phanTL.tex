@@ -1,0 +1,56 @@
+\setcounter{ex}{0}
+\setcounter{bt}{0}
+
+% --- CÂU 1 ---
+\begin{ex}
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành tâm $O$. Gọi $M$ là trung điểm cạnh $SD$ và $N$ là điểm thuộc cạnh $SC$ sao cho $NS = 2NC$.
+	\begin{enumerate}[1.]
+		\item Tìm giao tuyến của hai mặt phẳng $(SAC)$ và $(SBD)$.
+		\item Chứng minh $OM$ song song với mặt phẳng $(SAB)$.
+		\item Tìm giao điểm $K$ của đường thẳng $NB$ và mặt phẳng $(AMC)$.
+	\end{enumerate}
+	\loigiai{
+		\begin{center}
+			\begin{tikzpicture}[scale=0.95, font=\footnotesize, line join=round, line cap=round]
+				\coordinate (A) at (0,0);
+				\coordinate (B) at (-1.4,-1.5);
+				\coordinate (C) at (2.6,-1.5);
+				\coordinate (D) at (4,0);
+				\coordinate (O) at ($(A)!0.5!(C)$);
+				\coordinate (S) at (0.8,3.2);
+				\coordinate (M) at ($(S)!0.5!(D)$);
+				\coordinate (N) at ($(S)!0.67!(C)$);
+				\coordinate (I) at (intersection of M--C and N--D);
+				\coordinate (K) at (intersection of N--B and O--I);
+				\draw[thick] (S)--(B) (S)--(C) (S)--(D) (B)--(C)--(D) (M)--(C) (N)--(D) (N)--(B);
+				\draw[dashed] (S)--(A) (A)--(B) (A)--(D) (A)--(C) (B)--(D) (S)--(O) (O)--(M) (A)--(M) (O)--(I);
+				\foreach \p/\pos in {S/above, A/above left, B/below left, C/below, D/right, O/below, M/above right, N/right, I/right, K/above left}
+					\node[\pos] at (\p) {$\p$};
+				\foreach \p in {S,A,B,C,D,O,M,N,I,K}
+					\fill (\p) circle (1.2pt);
+			\end{tikzpicture}
+		\end{center}
+		\begin{enumerate}[1.]
+			\item \textbf{Tìm giao tuyến của hai mặt phẳng $(SAC)$ và $(SBD)$:}
+			\begin{itemize}
+				\item Ta có $S \in (SAC) \cap (SBD)$.
+				\item Trong mặt phẳng $(ABCD)$, vì $O = AC \cap BD$ nên $\heva{O \in AC \subset (SAC) \\ O \in BD \subset (SBD)} \implies O \in (SAC) \cap (SBD)$.
+			\end{itemize}
+			Vậy giao tuyến của hai mặt phẳng $(SAC)$ và $(SBD)$ là đường thẳng $SO$.
+			\item \textbf{Chứng minh $OM$ song song với mặt phẳng $(SAB)$:}
+			\begin{itemize}
+				\item Vì $ABCD$ là hình bình hành tâm $O$ nên $O$ là trung điểm của $BD$.
+				\item Xét tam giác $SBD$ có $O$ là trung điểm của $BD$ và $M$ là trung điểm của $SD$, suy ra $OM$ là đường trung bình của tam giác $SBD \implies OM \parallel SB$.
+				\item Mà $\heva{SB &\subset (SAB) \\ OM &\not\subset (SAB)}$ nên $OM \parallel (SAB)$.
+			\end{itemize}
+			\item \textbf{Tìm giao điểm $K$ của đường thẳng $NB$ và mặt phẳng $(AMC)$:}\\
+			Chọn mặt phẳng phụ $(NBD)$ chứa đường thẳng $NB$. Ta tìm giao tuyến của $(AMC)$ và $(NBD)$:
+			\begin{itemize}
+				\item Ta có $O = AC \cap BD \implies \heva{O \in AC \subset (AMC) \\ O \in BD \subset (NBD)} \implies O$ là điểm chung thứ nhất của $(AMC)$ và $(NBD)$.
+				\item Trong mặt phẳng $(SCD)$, hai đường thẳng $MC$ và $ND$ cắt nhau tại điểm $I$ ($I = MC \cap ND$). Khi đó $\heva{I \in MC \subset (AMC) \\ I \in ND \subset (NBD)} \implies I$ là điểm chung thứ hai của $(AMC)$ và $(NBD)$.
+				\item Suy ra $(AMC) \cap (NBD) = OI$.
+			\end{itemize}
+			Trong mặt phẳng $(NBD)$, gọi $K = NB \cap OI$. Khi đó $\heva{K \in NB \\ K \in OI \subset (AMC)}$ nên $K$ chính là giao điểm của đường thẳng $NB$ và mặt phẳng $(AMC)$.
+		\end{enumerate}
+	}
+\end{ex}

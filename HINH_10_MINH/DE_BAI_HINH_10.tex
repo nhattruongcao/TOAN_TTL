@@ -1,0 +1,54 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\usepackage{eso-pic}
+
+% khung header trên dưới và logo ẩn
+\input{NEWHEADER_TTL.tex}                                             
+
+% Nhãn câu hỏi dạng Tag (TikZ)
+\input{nhan_TTL.tex}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\geometry{
+	left=1.8cm, right=1.8cm,
+	top=3.3cm,
+	bottom=2.5cm,
+	headheight=1.5cm, 
+	headsep=0.1cm
+}
+
+\usepackage{amsmath,amssymb,mathrsfs,fancyhdr,enumerate,multirow,makecell,currfile,venndiagram}
+\usepackage{tikz-3dplot,tikz,tkz-tab,tabvar}
+\usetikzlibrary{arrows,calc,intersections,angles,decorations,quotes,backgrounds,shapes.geometric,patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\usepackage{varwidth}
+\usepackage{calc}
+\usetikzlibrary{shapes.geometric}
+\usepackage[debai]{ex_test}
+\newtheorem{bt}{Câu}
+\usepackage{tkz-euclide}
+\providecommand{\hoac}[1]{\left[\begin{aligned}#1\end{aligned}\right.}
+\providecommand{\heva}[1]{\left\{\begin{aligned}#1\end{aligned}\right.}
+
+\input{KHUNGTIEUDE_TTL.tex}
+
+\newcommand{\phantl}{\mySectionBox{TỰ LUẬN}{ỨNG DỤNG HỆ THỨC LƯỢNG VÀO BÀI TOÁN THỰC TẾ}}
+	
+\usepackage{marvosym}
+\pagestyle{empty}
+\usetikzlibrary{patterns}
+
+\begin{document}
+	\begin{center}
+		\mySectionBox{ĐỀ BÀI}{10 BÀI TOÁN THỰC TẾ GIẢI TAM GIÁC -- HÌNH HỌC 10}
+	\end{center}
+	\phantl
+	\IfFileExists{phanTL.tex}{\input{phanTL.tex}}{\input{HINH_10_MINH/phanTL.tex}}
+
+\end{document}

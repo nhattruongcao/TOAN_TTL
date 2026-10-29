@@ -1,0 +1,125 @@
+% =====================================================================
+% CẤU HÌNH KHUNG CÂU HỎI "TT | Câu X." (GIỮ NGUYÊN CODE CỦA BẠN + XÓA SỐ NGOÀI)
+% =====================================================================
+\usetikzlibrary{calc, shadings}
+
+% Bảng màu chuẩn theo ảnh mẫu
+\definecolor{ttNavy}{RGB}{20, 32, 85}     % Xanh Navy đậm
+\definecolor{ttNavyLight}{RGB}{42, 60, 130}% Xanh Navy sáng (tạo độ bóng)
+\definecolor{ttBgLeft}{RGB}{235, 242, 252} % Nền xanh nhạt bên trái
+\definecolor{ttBgRight}{RGB}{246, 249, 255}% Nền xanh nhạt bên phải
+\definecolor{ttSlash}{RGB}{85, 118, 185}   % Màu xanh của các vạch chéo
+
+% Nhãn thương hiệu mặc định là TTL, có thể ghi đè \gdef\tagBrand{NT} cho từng đề riêng biệt
+\providecommand{\tagBrand}{TTL}
+
+\DeclareRobustCommand{\myTTTag}[1]{%
+	\begin{tikzpicture}[baseline=(mytext.base), line join=round, line cap=round]
+		% 1. Chữ chứa nội dung làm khung chuẩn
+		\node[
+		font=\bfseries\rmfamily, 
+		text=ttNavy, 
+		inner xsep=10pt, 
+		inner ysep=3pt
+		] (mytext) at (0,0) {#1};
+		
+		% 2. Hệ tọa độ an toàn tuyệt đối (tránh xung đột ký tự macro)
+		\path let \p{boxN}=(mytext.north), \p{boxS}=(mytext.south), \p{boxW}=(mytext.west), \p{boxE}=(mytext.east),
+		\n{boxH}={0.5*(\y{boxN}-\y{boxS}) + 1.2pt} in
+		coordinate (Rtop) at (\x{boxE}+2pt, \n{boxH})
+		coordinate (Rtip) at (\x{boxE}+9.5pt, 0)
+		coordinate (Rbot) at (\x{boxE}+2pt, -\n{boxH})
+		coordinate (Lmid) at (\x{boxW}+1.5pt, 0)
+		coordinate (Ltop) at (\x{boxW}-6pt, \n{boxH})
+		coordinate (Lbot) at (\x{boxW}-6pt, -\n{boxH})
+		coordinate (P1)   at (\x{boxW}-7.2pt, \n{boxH})
+		coordinate (P2)   at (\x{boxW}+0.3pt, 0)
+		coordinate (P3)   at (\x{boxW}-7.2pt, -\n{boxH})
+		coordinate (Q1)   at (\x{boxW}-26pt, \n{boxH})
+		coordinate (Q2)   at (\x{boxW}-26pt, -\n{boxH})
+		coordinate (Q3)   at (\x{boxW}-26pt, \n{boxH}-2.5pt)
+		coordinate (Q4)   at (\x{boxW}-23.5pt, \n{boxH})
+		coordinate (Q5)   at (\x{boxW}-26pt, -\n{boxH}+2.5pt)
+		coordinate (Q6)   at (\x{boxW}-23.5pt, -\n{boxH})
+		coordinate (TTpos) at (\x{boxW}-13pt, 0);
+		
+		% 3. Nền khung bên phải (chuyển sắc nhẹ từ trái sang phải)
+		\shade[left color=ttBgLeft, right color=ttBgRight] 
+		(Ltop) -- (Rtop) -- (Rtip) -- (Rbot) -- (Lbot) -- (Lmid) -- cycle;
+		
+		% 4. Viền trên khung phải: nét liền ngắn + 3 vạch chéo nhỏ + nét liền ra mũi tên
+		\draw[ttNavy, line width=0.65pt] (Ltop) -- ++(2.5pt,0);
+		\foreach \i in {0,1,2} {
+			\fill[ttNavy] ([xshift=4pt+\i*2.4pt, yshift=0.4pt]Ltop) -- ++(1.4pt,0) -- ++(0.7pt,-0.9pt) -- ++(-1.4pt,0) -- cycle;
+		}
+		% Viền trên đi qua đỉnh nhọn bên phải và dừng ở lưng chừng cạnh dưới
+		\draw[ttNavy, line width=0.65pt] ([xshift=12pt]Ltop) -- (Rtop) -- (Rtip) -- ($(Rtip)!0.38!(Rbot)$);
+		
+		% 5. Viền dưới khung phải + 4 vạch chéo xanh ở góc phải dưới
+		\draw[ttNavy, line width=0.65pt] (Lbot) -- ([xshift=-12.5pt]Rbot);
+		\foreach \i in {0,1,2,3} {
+			\fill[ttSlash] ([xshift=-11pt+\i*2.8pt, yshift=1.1pt]Rbot) -- ++(1.5pt,0) -- ++(2.2pt,-2.6pt) -- ++(-1.5pt,0) -- cycle;
+		}
+		
+		% 6. Khối lục giác "TT" bên trái (Đổ bóng gradient xanh Navy)
+		\shade[top color=ttNavyLight, bottom color=ttNavy, middle color=ttNavy] 
+		(Q4) -- (P1) -- (P2) -- (P3) -- (Q6) -- (Q5) -- (Q3) -- cycle;
+		\draw[ttNavy, line width=0.5pt] 
+		(Q4) -- (P1) -- (P2) -- (P3) -- (Q6) -- (Q5) -- (Q3) -- cycle;
+		
+		% Viền trắng mảnh vát góc lồng bên trong khối TT
+		\draw[white!90!ttBgLeft, line width=0.45pt] 
+		([xshift=0.6pt, yshift=-1.3pt]Q4) -- 
+		([xshift=-0.9pt, yshift=-1.3pt]P1) -- 
+		([xshift=-1.8pt]P2) -- 
+		([xshift=-0.9pt, yshift=1.3pt]P3) -- 
+		([xshift=0.6pt, yshift=1.3pt]Q6) -- 
+		([xshift=1.3pt, yshift=0.6pt]Q5) -- 
+		([xshift=1.3pt, yshift=-0.6pt]Q3) -- cycle;
+		
+		% 7. Đường viền áo ngoài ôm lấy khối TT
+		\draw[ttNavy, line width=0.65pt] 
+		([xshift=-14pt, yshift=1.8pt]P1) -- 
+		([xshift=0.7pt, yshift=1.8pt]P1) -- 
+		([xshift=2.6pt]P2) -- 
+		([xshift=0.7pt, yshift=-1.8pt]P3) -- 
+		([xshift=-16pt, yshift=-1.8pt]P3);
+		\draw[ttNavy, line width=0.65pt] ([xshift=-18pt, yshift=1.8pt]P1) -- ([xshift=-15.2pt, yshift=1.8pt]P1);
+		
+		% 8. Chữ "TT" và nội dung trong khung
+		\node[font=\bfseries\rmfamily\scriptsize, text=white] at 	([xshift=-1.5pt, yshift=0pt]TTpos) {\tagBrand};
+		\node[font=\bfseries\rmfamily, text=ttNavy, inner 			xsep=10pt, 	inner ysep=3pt] at (0,0) {#1};
+	\end{tikzpicture}%
+}
+
+% Cấu hình nuốt số lặp ở bên ngoài nhưng giữ nguyên số bên trong khung
+\makeatletter
+\AtBeginDocument{%
+	\let\orig@theex\theex
+	\let\orig@thebt\thebt
+	% Hàm gắn khung cho môi trường ex
+	\def\setTT@ex{%
+		\def\nameex{%
+			\myTTTag{Câu \orig@theex.}%
+			\gdef\theex{\gdef\theex{\orig@theex}}%
+			\nullfont
+			\everyhbox{\normalfont\everyhbox{}}%
+		}%
+	}%
+	% Hàm gắn khung cho môi trường bt (Tự luận)
+	\def\setTT@bt{%
+		\def\namebt{%
+			\myTTTag{Câu \orig@thebt.}%
+			\gdef\thebt{\gdef\thebt{\orig@thebt}}%
+			\nullfont
+			\everyhbox{\normalfont\everyhbox{}}%
+		}%
+	}%
+	\setTT@ex
+	\setTT@bt
+	% Chống bị lệnh \renewcommand{\nameex}{Câu} ở đầu phần Tự luận ghi đè
+	\AddToHook{env/ex/begin}{\setTT@ex\normalfont}%
+	\AddToHook{env/bt/begin}{\setTT@bt\normalfont}%
+}
+\makeatother
+% =====================================================================

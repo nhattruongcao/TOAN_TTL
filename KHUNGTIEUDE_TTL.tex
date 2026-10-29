@@ -1,0 +1,78 @@
+\newcommand{\mySectionBox}[2]{%
+	\noindent
+	\begin{tikzpicture}[baseline=(secText.base), line join=round, line cap=round]
+		% 1. Nội dung bên phải làm chuẩn chiều cao
+		\node[
+		font=\bfseries\rmfamily\itshape, 
+		text=ttNavy, 
+		inner xsep=12pt, 
+		inner ysep=4pt
+		] (secText) at (0,0) {#2};
+		
+		% 2. Tọa độ khung bên phải và khối lục giác bên trái (đã kéo dài để chứa chữ thoải mái)
+		\path let \p{N}=(secText.north), \p{S}=(secText.south), \p{W}=(secText.west), \p{E}=(secText.east),
+		\n{H}={0.5*(\y{N}-\y{S}) + 1.5pt} in
+		coordinate (Rtop) at (\x{E}+3pt, \n{H})
+		coordinate (Rtip) at (\x{E}+12pt, 0)
+		coordinate (Rbot) at (\x{E}+3pt, -\n{H})
+		coordinate (Lmid) at (\x{W}+1.5pt, 0)
+		coordinate (Ltop) at (\x{W}-6pt, \n{H})
+		coordinate (Lbot) at (\x{W}-6pt, -\n{H})
+		coordinate (P1)   at (\x{W}-8pt, \n{H})
+		coordinate (P2)   at (\x{W}+0.5pt, 0)
+		coordinate (P3)   at (\x{W}-8pt, -\n{H})
+		coordinate (Q1)   at (\x{W}-64pt, \n{H})
+		coordinate (Q2)   at (\x{W}-64pt, -\n{H})
+		coordinate (Q3)   at (\x{W}-64pt, \n{H}-3pt)
+		coordinate (Q4)   at (\x{W}-60pt, \n{H})
+		coordinate (Q5)   at (\x{W}-64pt, -\n{H}+3pt)
+		coordinate (Q6)   at (\x{W}-60pt, -\n{H})
+		coordinate (BoxL) at (\x{W}-32pt, 0);
+		
+		% 3. Nền khung phải
+		\shade[left color=ttBgLeft, right color=ttBgRight] 
+		(Ltop) -- (Rtop) -- (Rtip) -- (Rbot) -- (Lbot) -- (Lmid) -- cycle;
+		
+		% 4. Viền trên phải + vạch chéo
+		\draw[ttNavy, line width=0.7pt] (Ltop) -- ++(3pt,0);
+		\foreach \i in {0,1,2} {
+			\fill[ttNavy] ([xshift=5pt+\i*2.8pt, yshift=0.4pt]Ltop) -- ++(1.5pt,0) -- ++(0.8pt,-1pt) -- ++(-1.5pt,0) -- cycle;
+		}
+		\draw[ttNavy, line width=0.7pt] ([xshift=14pt]Ltop) -- (Rtop) -- (Rtip) -- ($(Rtip)!0.38!(Rbot)$);
+		
+		% 5. Viền dưới phải + vạch chéo góc phải
+		\draw[ttNavy, line width=0.7pt] (Lbot) -- ([xshift=-14pt]Rbot);
+		\foreach \i in {0,1,2,3} {
+			\fill[ttSlash] ([xshift=-12pt+\i*3pt, yshift=1.2pt]Rbot) -- ++(1.6pt,0) -- ++(2.4pt,-2.8pt) -- ++(-1.6pt,0) -- cycle;
+		}
+		
+		% 6. Khối lục giác trái (Đổ bóng)
+		\shade[top color=ttNavyLight, bottom color=ttNavy, middle color=ttNavy] 
+		(Q4) -- (P1) -- (P2) -- (P3) -- (Q6) -- (Q5) -- (Q3) -- cycle;
+		\draw[ttNavy, line width=0.5pt] 
+		(Q4) -- (P1) -- (P2) -- (P3) -- (Q6) -- (Q5) -- (Q3) -- cycle;
+		
+		% Viền trắng lồng bên trong khối trái
+		\draw[white!90!ttBgLeft, line width=0.45pt] 
+		([xshift=0.8pt, yshift=-1.5pt]Q4) -- 
+		([xshift=-1pt, yshift=-1.5pt]P1) -- 
+		([xshift=-2pt]P2) -- 
+		([xshift=-1pt, yshift=1.5pt]P3) -- 
+		([xshift=0.8pt, yshift=1.5pt]Q6) -- 
+		([xshift=1.5pt, yshift=0.7pt]Q5) -- 
+		([xshift=1.5pt, yshift=-0.7pt]Q3) -- cycle;
+		
+		% 7. Viền ngoài khối trái
+		\draw[ttNavy, line width=0.7pt] 
+		([xshift=-16pt, yshift=2pt]P1) -- 
+		([xshift=0.8pt, yshift=2pt]P1) -- 
+		([xshift=3pt]P2) -- 
+		([xshift=0.8pt, yshift=-2pt]P3) -- 
+		([xshift=-18pt, yshift=-2pt]P3);
+		\draw[ttNavy, line width=0.7pt] ([xshift=-20pt, yshift=2pt]P1) -- ([xshift=-17.2pt, yshift=2pt]P1);
+		
+		% 8. Chữ trong 2 khung
+		\node[font=\bfseries\rmfamily\small, text=white] at (BoxL) {#1};
+		\node[font=\bfseries\rmfamily\itshape, text=ttNavy, inner xsep=12pt, inner ysep=4pt] at (0,0) {#2};
+	\end{tikzpicture}\par\vspace{0.5em}%
+}

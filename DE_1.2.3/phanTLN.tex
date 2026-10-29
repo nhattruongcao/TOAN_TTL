@@ -1,0 +1,38 @@
+\setcounter{ex}{0}
+
+% --- CÂU 1 ---
+\begin{ex}
+	Một tảng băng có khối lượng ban đầu là $4$ tấn đang tan chảy. Cứ mỗi giờ, tảng băng mất đi $\dfrac{1}{4}$ khối lượng của nó ở thời điểm ngay trước đó. Tính khối lượng còn lại của tảng băng (tính bằng tấn) sau $2$ giờ.
+	\shortans{2,25}
+	\loigiai{
+		Cứ sau mỗi giờ, khối lượng còn lại của tảng băng bằng $1 - \dfrac{1}{4} = \dfrac{3}{4}$ khối lượng của nó ở thời điểm ngay trước đó.\\
+		Do đó, khối lượng của tảng băng sau mỗi giờ lập thành một cấp số nhân có công bội $q = \dfrac{3}{4}$.\\
+		Sau $2$ giờ, khối lượng còn lại của tảng băng là:
+		$$M_2 = 4 \cdot \left(\dfrac{3}{4}\right)^2 = 4 \cdot \dfrac{9}{16} = \dfrac{9}{4} = 2{,}25\text{ (tấn)}.$$
+	}
+\end{ex}
+
+% --- CÂU 2 ---
+\begin{ex}
+	Rút gọn biểu thức $A = \dfrac{3\sin^2 x + \cos^2 x - 1}{\sin^2 x}$ với $\sin x \ne 0$. Kết quả của biểu thức $A$ là một hằng số. Hãy tìm hằng số đó.
+	\shortans{2}
+	\loigiai{
+		Áp dụng hằng đẳng thức lượng giác cơ bản $\sin^2 x + \cos^2 x = 1 \implies \cos^2 x - 1 = -\sin^2 x$, ta có:
+		$$A = \dfrac{3\sin^2 x + (\cos^2 x - 1)}{\sin^2 x} = \dfrac{3\sin^2 x - \sin^2 x}{\sin^2 x} = \dfrac{2\sin^2 x}{\sin^2 x} = 2.$$
+		Vậy hằng số cần tìm là $2$.
+	}
+\end{ex}
+
+% --- CÂU 3 ---
+\begin{ex}
+	Mực nước tại một trạm quan trắc thủy triều tính theo giờ thứ $t\ (0 \le t \le 24)$ trong một ngày được cho bởi công thức $h(t) = 5 + 2\sin\left(\dfrac{\pi}{12}t\right)$ (mét). Hỏi vào giờ thứ mấy trong ngày ($0 \le t \le 24$) thì mực nước đạt mức thấp nhất?
+	\shortans{18}
+	\loigiai{
+		Vì $\sin\left(\dfrac{\pi}{12}t\right) \ge -1, \forall t \in [0; 24]$ nên:
+		$$h(t) = 5 + 2\sin\left(\dfrac{\pi}{12}t\right) \ge 5 + 2\cdot(-1) = 3\text{ (mét)}.$$
+		Mực nước đạt mức thấp nhất bằng $3$ mét khi và chỉ khi:
+		$$\sin\left(\dfrac{\pi}{12}t\right) = -1 \iff \dfrac{\pi}{12}t = -\dfrac{\pi}{2} + k2\pi \iff t = -6 + 24k\ (k \in \mathbb{Z}).$$
+		Do $0 \le t \le 24$ nên chọn $k = 1$, ta được $t = 18$.\\
+		Vậy vào giờ thứ $18$ trong ngày thì mực nước đạt mức thấp nhất.
+	}
+\end{ex}
