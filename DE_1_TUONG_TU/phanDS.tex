@@ -1,0 +1,98 @@
+\setcounter{ex}{0}
+
+% --- CÂU 1 ---
+\begin{ex}
+	Cho phương trình $2\cos 2x - 1 = 0\ (*)$. Các mệnh đề sau đúng hay sai?
+	\choiceTFt
+	{\True Phương trình $(*)$ tương đương với $\cos 2x = \cos\dfrac{\pi}{3}$}
+	{\True Tập nghiệm của $(*)$ là $\left\{\pm\dfrac{\pi}{6} + k\pi,\ k \in \mathbb{Z}\right\}$}
+	{Nghiệm dương nhỏ nhất của $(*)$ bằng $\dfrac{\pi}{3}$}
+	{\True Phương trình $(*)$ có đúng $2$ nghiệm thuộc đoạn $[0; \pi]$}
+	\loigiai{
+		\begin{itemchoice}
+			\itemch \textbf{Đúng.} Ta có $2\cos 2x - 1 = 0 \iff \cos 2x = \dfrac{1}{2} \iff \cos 2x = \cos\dfrac{\pi}{3}$.
+			\itemch \textbf{Đúng.} Giải phương trình:
+			$$\cos 2x = \cos\dfrac{\pi}{3} \iff 2x = \pm\dfrac{\pi}{3} + k2\pi \iff x = \pm\dfrac{\pi}{6} + k\pi\ (k \in \mathbb{Z}).$$
+			Vậy tập nghiệm của $(*)$ là $S = \left\{\pm\dfrac{\pi}{6} + k\pi,\ k \in \mathbb{Z}\right\}$.
+			\itemch \textbf{Sai.} Họ $x = \dfrac{\pi}{6} + k\pi$ với $k = 0$ cho nghiệm dương $x = \dfrac{\pi}{6} < \dfrac{\pi}{3}$, nên nghiệm dương nhỏ nhất bằng $\dfrac{\pi}{6}$.
+			\itemch \textbf{Đúng.} Trên đoạn $[0; \pi]$, các nghiệm là $x = \dfrac{\pi}{6}$ (ứng với họ cộng, $k = 0$) và $x = \dfrac{5\pi}{6}$ (ứng với họ trừ, $k = 1$). Vậy có đúng $2$ nghiệm.
+		\end{itemchoice}
+	}
+\end{ex}
+
+% --- CÂU 2 ---
+\begin{ex}
+	Cho hàm số $y = \sqrt{3}\sin x - \cos x$. Các mệnh đề sau đúng hay sai?
+	\choiceTFt
+	{\True $y = 2\sin\left(x - \dfrac{\pi}{6}\right)$}
+	{\True Giá trị lớn nhất của hàm số bằng $2$}
+	{Hàm số đã cho là hàm số lẻ}
+	{\True Giá trị lớn nhất của hàm số trên đoạn $\left[0; \dfrac{\pi}{2}\right]$ bằng $\sqrt{3}$}
+	\loigiai{
+		\begin{itemchoice}
+			\itemch \textbf{Đúng.} Ta có:
+			$$y = \sqrt{3}\sin x - \cos x = 2\left(\dfrac{\sqrt{3}}{2}\sin x - \dfrac{1}{2}\cos x\right) = 2\left(\sin x\cos\dfrac{\pi}{6} - \cos x\sin\dfrac{\pi}{6}\right) = 2\sin\left(x - \dfrac{\pi}{6}\right).$$
+			\itemch \textbf{Đúng.} Vì $-1 \le \sin\left(x - \dfrac{\pi}{6}\right) \le 1, \forall x \in \mathbb{R}$ nên $-2 \le y \le 2$. Vậy giá trị lớn nhất bằng $2$.
+			\itemch \textbf{Sai.} Với $x = 0$, ta có $y(0) = -1 \ne 0$, nên hàm số không phải là hàm số lẻ.
+			\itemch \textbf{Đúng.} Với $x \in \left[0; \dfrac{\pi}{2}\right] \implies x - \dfrac{\pi}{6} \in \left[-\dfrac{\pi}{6}; \dfrac{\pi}{3}\right]$.\\
+			Trên đoạn $\left[-\dfrac{\pi}{6}; \dfrac{\pi}{3}\right]$, hàm số $\sin\left(x - \dfrac{\pi}{6}\right)$ đồng biến và đạt giá trị lớn nhất tại $x - \dfrac{\pi}{6} = \dfrac{\pi}{3} \iff x = \dfrac{\pi}{2}$.\\
+			Khi đó $\max_{\left[0; \frac{\pi}{2}\right]} y = 2\sin\dfrac{\pi}{3} = 2 \cdot \dfrac{\sqrt{3}}{2} = \sqrt{3}$.
+		\end{itemchoice}
+	}
+\end{ex}
+
+% --- CÂU 3 ---
+\begin{ex}
+	Cho cấp số cộng $(u_n)$ thỏa mãn $\heva{u_2 + u_5 &= 19 \\ u_3 + u_7 &= 28.}$ Các mệnh đề sau đúng hay sai?
+	\choiceTFt
+	{\True Số hạng đầu $u_1 = 2$}
+	{\True Công sai $d = 3$}
+	{Số hạng thứ mười lăm $u_{15} = 45$}
+	{\True Tổng $12$ số hạng đầu $S_{12} = 222$}
+	\loigiai{
+		\begin{itemchoice}
+			\itemch \textbf{Đúng.} Biểu diễn theo $u_1$ và $d$:
+			$$\heva{u_2 + u_5 = (u_1 + d) + (u_1 + 4d) = 2u_1 + 5d = 19 \\ u_3 + u_7 = (u_1 + 2d) + (u_1 + 6d) = 2u_1 + 8d = 28} \iff \heva{3d = 9 \\ 2u_1 + 5d = 19} \iff \heva{d = 3 \\ u_1 = 2.}$$
+			Vậy số hạng đầu $u_1 = 2$.
+			\itemch \textbf{Đúng.} Từ hệ trên ta có công sai $d = 3$.
+			\itemch \textbf{Sai.} Số hạng thứ $15$ là $u_{15} = u_1 + 14d = 2 + 14 \cdot 3 = 44 \ne 45$.
+			\itemch \textbf{Đúng.} Tổng $12$ số hạng đầu là:
+			$$S_{12} = 12u_1 + \dfrac{12 \cdot 11}{2}d = 12 \cdot 2 + 66 \cdot 3 = 24 + 198 = 222.$$
+		\end{itemchoice}
+	}
+\end{ex}
+
+% --- CÂU 4 ---
+\begin{ex}
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình thang ($AB \parallel CD,\ AB = 2CD$). Gọi $P, Q$ lần lượt là trung điểm của $AD, BC$ (hình vẽ). Các mệnh đề sau đúng hay sai?
+	\begin{center}
+		\begin{tikzpicture}[scale=0.85, font=\footnotesize, line join=round, line cap=round]
+			\coordinate (A) at (0,0);
+			\coordinate (B) at (4,0);
+			\coordinate (D) at (1,1.1);
+			\coordinate (C) at (3,1.1);
+			\coordinate (S) at (2,3.5);
+			\coordinate (P) at ($(A)!0.5!(D)$);
+			\coordinate (Q) at ($(B)!0.5!(C)$);
+			\draw[thick] (S)--(A) (S)--(B) (A)--(B);
+			\draw[dashed] (S)--(D) (S)--(C) (A)--(D)--(C)--(B) (P)--(Q);
+			\foreach \p/\pos in {S/above, A/below left, B/below right, C/right, D/left, P/above left, Q/above right}
+				\node[\pos] at (\p) {$\p$};
+			\foreach \p in {S,A,B,C,D,P,Q}
+				\fill (\p) circle (1.2pt);
+		\end{tikzpicture}
+	\end{center}
+	\choiceTFt
+	{\True Giao tuyến của $(SAD)$ và $(SBC)$ là đường thẳng đi qua $S$ và điểm $E = AD \cap BC$}
+	{\True Đoạn thẳng $PQ$ song song với cả $AB$ và $CD$}
+	{$PQ$ cắt mặt phẳng $(SCD)$}
+	{\True Mặt phẳng $(SPQ)$ cắt hình chóp theo một thiết diện là tam giác $SPQ$}
+	\loigiai{
+		\begin{itemchoice}
+			\itemch \textbf{Đúng.} Hai mặt phẳng $(SAD)$ và $(SBC)$ có điểm chung $S$ và điểm chung $E = AD \cap BC$ nên giao tuyến là đường thẳng $SE$.
+			\itemch \textbf{Đúng.} Trong hình thang $ABCD$, $P$ và $Q$ lần lượt là trung điểm hai cạnh bên $AD$ và $BC$ nên $PQ$ là đường trung bình của hình thang, suy ra $PQ \parallel AB \parallel CD$.
+			\itemch \textbf{Sai.} Vì $PQ \parallel CD$ và $CD \subset (SCD)$, $PQ \not\subset (SCD)$ nên $PQ \parallel (SCD)$, do đó $PQ$ không cắt $(SCD)$.
+			\itemch \textbf{Đúng.} Thiết diện của mặt phẳng $(SPQ)$ với hình chóp $S.ABCD$ chính là tam giác $SPQ$.
+		\end{itemchoice}
+	}
+\end{ex}
